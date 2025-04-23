@@ -1,0 +1,104 @@
+> resume_numerique_quali
+$sexe
+  Catégorie Fréquence.absolue Proportion  Mode
+1     femme              1043   49.40786 homme
+2     homme              1068   50.59214  <NA>
+
+$ant_fam_obesite
+  Catégorie Fréquence.absolue Proportion Mode
+1       non               385    18.2378  oui
+2       oui              1726    81.7622 <NA>
+
+$conso_freq_alim_cal
+  Catégorie Fréquence.absolue Proportion Mode
+1       non               245   11.60587  oui
+2       oui              1866   88.39413 <NA>
+
+$mange_entre_repas
+    Catégorie Fréquence.absolue Proportion    Mode
+1    toujours                53   2.510658 souvent
+2 frequemment               242  11.463761    <NA>
+3         non                51   2.415917    <NA>
+4     souvent              1765  83.609664    <NA>
+
+$fume
+  Catégorie Fréquence.absolue Proportion Mode
+1       non              2067   97.91568  non
+2       oui                44    2.08432 <NA>
+
+$surveille_cal_conso
+  Catégorie Fréquence.absolue Proportion Mode
+1       non              2015  95.452392  non
+2       oui                96   4.547608 <NA>
+
+$freq_conso_alcool
+    Catégorie Fréquence.absolue  Proportion    Mode
+1    toujours                 1  0.04737091 souvent
+2 frequemment                70  3.31596400    <NA>
+3         non               639 30.27001421    <NA>
+4     souvent              1401 66.36665088    <NA>
+
+$moy_trans
+             Catégorie Fréquence.absolue Proportion                 Mode
+1           automobile               457 21.6485078 transports_en_commun
+2                 velo                 7  0.3315964                 <NA>
+3                 moto                11  0.5210801                 <NA>
+4 transports_en_commun              1580 74.8460445                 <NA>
+5               marche                56  2.6527712                 <NA>
+
+$niv_obesite
+       Catégorie Fréquence.absolue Proportion           Mode
+1     sous_poids               272   12.88489 obesite_type_1
+2         normal               287   13.59545           <NA>
+3 obesite_type_1               351   16.62719           <NA>
+4 obesite_type_2               297   14.06916           <NA>
+5 obesite_type_3               324   15.34818           <NA>
+6 surpoids_niv_1               290   13.73757           <NA>
+7 surpoids_niv_2               290   13.73757           <NA>
+
+$grp_imc
+             Catégorie Fréquence.absolue Proportion             Mode
+1   imc_inf_18.5_sousp               267   12.64803 imc_25_29.9_surp
+2 imc_18.5_24.9_normal               300   14.21127             <NA>
+3     imc_25_29.9_surp               566   26.81194             <NA>
+4  imc_30_34.9_obesmod               370   17.52724             <NA>
+5  imc_35_39.9_obessev               340   16.10611             <NA>
+6  imc_sup_40_obesmass               268   12.69541             <NA>
+
+$grp_freq_conso_legumes
+  Catégorie Fréquence.absolue Proportion     Mode
+1  rarement               131    6.20559 toujours
+2   souvent               903   42.77594     <NA>
+3  toujours              1077   51.01847     <NA>
+
+$grp_age
+  Catégorie Fréquence.absolue Proportion  Mode
+1     14_20               585  27.711985 20_26
+2     20_26              1028  48.697300  <NA>
+3     26_35               330  15.632402  <NA>
+4     35_61               168   7.958314  <NA>
+
+$grp_nbre_repas_jr
+     Catégorie Fréquence.absolue Proportion         Mode
+1   moins_de_2               395   18.71151 entre_2_et_3
+2 entre_2_et_3              1488   70.48792         <NA>
+3    plus_de_3               228   10.80057         <NA>
+
+$grp_conso_eau_jr
+   Catégorie Fréquence.absolue Proportion       Mode
+1 entre_1_2L              1217    57.6504 entre_1_2L
+2 plus_de_2L               894    42.3496       <NA>
+
+$grp_act_physique
+  Catégorie Fréquence.absolue Proportion     Mode
+1  tres_peu               833  39.459972 tres_peu
+2       peu               663  31.406916     <NA>
+3     assez               472  22.359072     <NA>
+4  frequent               143   6.774041     <NA>
+
+$grp_tps_use_tech
+      Catégorie Fréquence.absolue Proportion          Mode
+1 moins_de_30mn               952  45.097110 moins_de_30mn
+2 entre_30mn_1h               755  35.765040          <NA>
+3 entre_1h_1h30               160   7.579346          <NA>
+4 entre_1h30_2h               244  11.558503          <NA>

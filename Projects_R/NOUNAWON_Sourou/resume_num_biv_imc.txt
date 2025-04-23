@@ -1,0 +1,136 @@
+> res_num_qual_imc
+$sexe_imc
+# A tibble: 2 × 9
+  sexe  effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>    <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 femme     1043    30.1    28.5       9.40  13.0  50.8  22.4  40.1
+2 homme     1068    29.3    28.9       6.35  13.3  49.5  25.6  35.2
+
+$ant_fam_obesite_imc
+# A tibble: 2 × 9
+  ant_fam_obesite effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>              <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 non                  385    21.5    21.0       4.21  13.0  35.0  17.6  25.2
+2 oui                 1726    31.5    31.6       7.50  13.3  50.8  26.2  36.9
+
+$conso_freq_alim_cal_imc
+# A tibble: 2 × 9
+  conso_freq_alim_cal effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                  <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 non                      245    24.3    24.4       5.08  16.2  40.6  19.7  28.0
+2 oui                     1866    30.4    30.7       8.05  13.0  50.8  25.4  36.4
+
+$mange_entre_repas_imc
+# A tibble: 4 × 9
+  mange_entre_repas effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 toujours                53    24.3    23.8       4.96  13.3  36.5  21.0  26.1
+2 frequemment            242    20.9    18.9       4.46  15.4  49.5  17.6  23.5
+3 non                     51    25.4    26.4       3.33  17.6  36.2  25.3  26.7
+4 souvent               1765    31.2    31.2       7.67  13.0  50.8  26.0  36.7
+
+$fume_imc
+# A tibble: 2 × 9
+  fume  effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>    <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 non       2067    29.7    28.7       8.04  13.0  50.8  24.3  36.0
+2 oui         44    29.7    29.7       6.60  18.2  41.9  24.2  36.1
+
+$surveille_cal_conso_imc
+# A tibble: 2 × 9
+  surveille_cal_conso effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                  <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 non                     2015    30.0    29.3       8.01  13.0  50.8  24.8  36.2
+2 oui                       96    22.9    24.2       4.04  15.8  36.2  19.3  25.4
+
+$freq_conso_alcool_imc
+# A tibble: 4 × 9
+  freq_conso_alcool effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 toujours                 1    22.5    22.5      NA     22.5  22.5  22.5  22.5
+2 frequemment             70    27.0    26.9       3.72  17.9  36.2  24.7  28.9
+3 non                    639    27.1    28.0       6.39  15.8  40.6  21.2  32.1
+4 souvent               1401    31.0    30.9       8.49  13.0  50.8  25.4  38.0
+
+$moy_trans_imc
+# A tibble: 5 × 9
+  moy_trans            effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                   <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 automobile                457    29.2    29.0       6.09  16.6  40.6  25.8  33.3
+2 velo                        7    25.2    24.2       6.56  18.9  38.5  21.6  25.7
+3 moto                       11    25.8    24.4       4.79  18.5  33.3  22.8  29.7
+4 transports_en_commun     1580    30.1    29.0       8.51  13.0  50.8  24.2  36.6
+5 marche                     56    23.7    23.6       4.09  13.3  36.1  21.2  25.4
+
+$niv_obesite_imc
+# A tibble: 7 × 9
+  niv_obesite    effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>             <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 sous_poids          272    17.4    17.5      0.786  13.0  19.1  17.1  17.9
+2 normal              287    22.0    22.1      1.84   18.5  24.9  20.7  23.7
+3 obesite_type_1      351    32.3    32.2      1.13   29.9  35.2  31.4  33.0
+4 obesite_type_2      297    36.7    36.4      1.29   34.0  39.8  35.8  37.9
+5 obesite_type_3      324    42.3    41.9      2.58   36.8  50.8  40.6  43.8
+6 surpoids_niv_1      290    26.0    26.0      0.661  22.8  28.8  25.6  26.4
+7 surpoids_niv_2      290    28.2    28.2      0.828  25.7  30.4  27.6  28.9
+
+$grp_imc_imc
+# A tibble: 6 × 9
+  grp_imc              effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                   <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 imc_inf_18.5_sousp        267    17.4    17.5      0.771  13.0  18.5  17.1  17.9
+2 imc_18.5_24.9_normal      300    22.0    22.2      1.89   18.5  24.9  20.6  23.7
+3 imc_25_29.9_surp          566    27.1    27.0      1.27   24.9  29.9  26.0  28.1
+4 imc_30_34.9_obesmod       370    32.3    32.2      1.20   29.9  34.9  31.3  33.1
+5 imc_35_39.9_obessev       340    37.1    36.9      1.38   34.9  39.9  36.1  38.3
+6 imc_sup_40_obesmass       268    43.0    42.8      2.15   40.0  50.8  41.4  44.1
+
+$grp_freq_conso_legumes_imc
+# A tibble: 3 × 9
+  grp_freq_conso_legumes effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                     <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 rarement                    131    27.2    27.0       7.41  16.1  38.7  20.0  34.7
+2 souvent                     903    28.0    28.0       5.48  15.8  39.2  25.0  32.3
+3 toujours                   1077    31.4    31.8       9.37  13.0  50.8  24.2  39.9
+
+$grp_age_imc
+# A tibble: 4 × 9
+  grp_age effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>      <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 14_20        585    24.7    23.7       7.64  13.0  50.0  17.9  28.5
+2 20_26       1028    31.8    31.8       8.24  16.3  50.8  25.8  39.2
+3 26_35        330    31.5    32.1       5.06  17.3  39.2  27.3  36.1
+4 35_61        168    31.0    31.0       4.14  18.4  39.0  28.1  33.2
+
+$grp_nbre_repas_jr_imc
+# A tibble: 3 × 9
+  grp_nbre_repas_jr effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>                <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 moins_de_2             395    27.4    27.5       5.65  15.8  39.8  24.6  31.7
+2 entre_2_et_3          1488    31.5    31.8       8.03  13.0  50.8  25.6  37.6
+3 plus_de_3              228    22.1    19.6       5.53  14.2  38.0  17.6  26.2
+
+$grp_conso_eau_jr_imc
+# A tibble: 2 × 9
+  grp_conso_eau_jr effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>               <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 entre_1_2L           1217    27.9    27.3       7.48  15.4  49.5  22.1  33.2
+2 plus_de_2L            894    32.2    32.2       8.04  13.0  50.8  26.4  38.6
+
+$grp_act_physique_imc
+# A tibble: 4 × 9
+  grp_act_physique effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>               <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 tres_peu              833    30.9    30.9       7.76  15.8  49.4  25.7  38.1
+2 peu                   663    29.9    28.9       7.45  16.1  50.8  25.5  35.5
+3 assez                 472    28.7    27.1       9.26  15.4  50.0  19.7  35.7
+4 frequent              143    25.2    25.7       5.12  13.0  33.7  21.5  29.2
+
+$grp_tps_use_tech_imc
+# A tibble: 4 × 9
+  grp_tps_use_tech effectif moyenne mediane ecart_type   min   max    q1    q3
+  <fct>               <int>   <dbl>   <dbl>      <dbl> <dbl> <dbl> <dbl> <dbl>
+1 moins_de_30mn         952    29.7    28.7       7.11  16.3  48.6  25.3  35.5
+2 entre_30mn_1h         755    30.9    29.3       9.29  15.4  50.8  23.6  39.2
+3 entre_1h_1h30         160    29.1    29.1       7.17  13.0  39.8  25.9  35.8
+4 entre_1h30_2h         244    26.4    26.0       6.51  13.3  39.7  20.7  31.4

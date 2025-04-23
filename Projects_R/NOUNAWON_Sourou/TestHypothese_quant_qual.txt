@@ -1,0 +1,1151 @@
+🔹 Analyse de age en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre age et sexe : Statistique = -2.2245 , p-value = 0.0262 
+Test de Wilcoxon entre age et sexe : Statistique = 513089 , p-value = 0.0017 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre age et ant_fam_obesite : Statistique = 10.4595 , p-value = 0 
+Test de Wilcoxon entre age et ant_fam_obesite : Statistique = 467633 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre age et conso_freq_alim_cal : Statistique = -2.8954 , p-value = 0.0041 
+Test de Wilcoxon entre age et conso_freq_alim_cal : Statistique = 189688 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre age et mange_entre_repas : Statistique = 15.2817 , p-value = 0 
+Test Kruskal-Wallis entre age et mange_entre_repas : Statistique = 59.7112 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre age et fume : Statistique = -3.07 , p-value = 0.0037 
+Test de Wilcoxon entre age et fume : Statistique = 31130 , p-value = 3e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre age et surveille_cal_conso : Statistique = 5.7286 , p-value = 0 
+Test de Wilcoxon entre age et surveille_cal_conso : Statistique = 141064 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre age et freq_conso_alcool : Statistique = 4.9647 , p-value = 0.002 
+Test Kruskal-Wallis entre age et freq_conso_alcool : Statistique = 20.6833 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre age et moy_trans : Statistique = 306.7091 , p-value = 0 
+Test Kruskal-Wallis entre age et moy_trans : Statistique = 491.1884 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre age et niv_obesite : Statistique = 77.9542 , p-value = 0 
+Test Kruskal-Wallis entre age et niv_obesite : Statistique = 541.7734 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre age et grp_imc : Statistique = 81.7814 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_imc : Statistique = 524.7653 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre age et grp_freq_conso_legumes : Statistique = 11.6738 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_freq_conso_legumes : Statistique = 15.2192 , p-value = 5e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre age et grp_age : Statistique = 5667.362 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_age : Statistique = 1813.295 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre age et grp_nbre_repas_jr : Statistique = 21.1801 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_nbre_repas_jr : Statistique = 81.6986 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre age et grp_conso_eau_jr : Statistique = -0.7541 , p-value = 0.4509 
+Test de Wilcoxon entre age et grp_conso_eau_jr : Statistique = 483975 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre age et grp_act_physique : Statistique = 16.1573 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_act_physique : Statistique = 87.8642 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de age en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre age et grp_tps_use_tech : Statistique = 71.5184 , p-value = 0 
+Test Kruskal-Wallis entre age et grp_tps_use_tech : Statistique = 191.1229 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre taille et sexe : Statistique = -36.1304 , p-value = 0 
+Test de Wilcoxon entre taille et sexe : Statistique = 153179.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre taille et ant_fam_obesite : Statistique = 11.3116 , p-value = 0 
+Test de Wilcoxon entre taille et ant_fam_obesite : Statistique = 453490 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre taille et conso_freq_alim_cal : Statistique = -7.9526 , p-value = 0 
+Test de Wilcoxon entre taille et conso_freq_alim_cal : Statistique = 156832.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre taille et mange_entre_repas : Statistique = 18.4179 , p-value = 0 
+Test Kruskal-Wallis entre taille et mange_entre_repas : Statistique = 60.1116 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre taille et fume : Statistique = -1.8946 , p-value = 0.0647 
+Test de Wilcoxon entre taille et fume : Statistique = 37178 , p-value = 0.0381 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre taille et surveille_cal_conso : Statistique = 5.5966 , p-value = 0 
+Test de Wilcoxon entre taille et surveille_cal_conso : Statistique = 132188 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre taille et freq_conso_alcool : Statistique = 12.3301 , p-value = 0 
+Test Kruskal-Wallis entre taille et freq_conso_alcool : Statistique = 39.1137 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre taille et moy_trans : Statistique = 4.8073 , p-value = 7e-04 
+Test Kruskal-Wallis entre taille et moy_trans : Statistique = 24.0935 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre taille et niv_obesite : Statistique = 38.4323 , p-value = 0 
+Test Kruskal-Wallis entre taille et niv_obesite : Statistique = 219.2926 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre taille et grp_imc : Statistique = 23.952 , p-value = 0 
+Test Kruskal-Wallis entre taille et grp_imc : Statistique = 117.0717 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre taille et grp_freq_conso_legumes : Statistique = 0.8971 , p-value = 0.4079 
+Test Kruskal-Wallis entre taille et grp_freq_conso_legumes : Statistique = 3.9022 , p-value = 0.1421 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre taille et grp_age : Statistique = 40.0379 , p-value = 0 
+Test Kruskal-Wallis entre taille et grp_age : Statistique = 107.319 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre taille et grp_nbre_repas_jr : Statistique = 63.5899 , p-value = 0 
+Test Kruskal-Wallis entre taille et grp_nbre_repas_jr : Statistique = 119.1597 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre taille et grp_conso_eau_jr : Statistique = -10.947 , p-value = 0 
+Test de Wilcoxon entre taille et grp_conso_eau_jr : Statistique = 398048 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre taille et grp_act_physique : Statistique = 81.8906 , p-value = 0 
+Test Kruskal-Wallis entre taille et grp_act_physique : Statistique = 224.5286 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de taille en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre taille et grp_tps_use_tech : Statistique = 6.9334 , p-value = 1e-04 
+Test Kruskal-Wallis entre taille et grp_tps_use_tech : Statistique = 24.5136 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre poids et sexe : Statistique = -7.4952 , p-value = 0 
+Test de Wilcoxon entre poids et sexe : Statistique = 425390.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre poids et ant_fam_obesite : Statistique = 36.2733 , p-value = 0 
+Test de Wilcoxon entre poids et ant_fam_obesite : Statistique = 585358 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre poids et conso_freq_alim_cal : Statistique = -17.8337 , p-value = 0 
+Test de Wilcoxon entre poids et conso_freq_alim_cal : Statistique = 112208.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre poids et mange_entre_repas : Statistique = 149.9056 , p-value = 0 
+Test Kruskal-Wallis entre poids et mange_entre_repas : Statistique = 396.9672 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre poids et fume : Statistique = -1.0916 , p-value = 0.2809 
+Test de Wilcoxon entre poids et fume : Statistique = 41266.5 , p-value = 0.293 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre poids et surveille_cal_conso : Statistique = 16.1498 , p-value = 0 
+Test de Wilcoxon entre poids et surveille_cal_conso : Statistique = 152622 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre poids et freq_conso_alcool : Statistique = 51.4023 , p-value = 0 
+Test Kruskal-Wallis entre poids et freq_conso_alcool : Statistique = 131.5478 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre poids et moy_trans : Statistique = 6.8149 , p-value = 0 
+Test Kruskal-Wallis entre poids et moy_trans : Statistique = 27.5308 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre poids et niv_obesite : Statistique = 1966.518 , p-value = 0 
+Test Kruskal-Wallis entre poids et niv_obesite : Statistique = 1822.167 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre poids et grp_imc : Statistique = 2294.53 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_imc : Statistique = 1797.111 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre poids et grp_freq_conso_legumes : Statistique = 35.956 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_freq_conso_legumes : Statistique = 52.8375 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre poids et grp_age : Statistique = 101.318 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_age : Statistique = 298.7409 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre poids et grp_nbre_repas_jr : Statistique = 170.7643 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_nbre_repas_jr : Statistique = 297.0379 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre poids et grp_conso_eau_jr : Statistique = -15.1923 , p-value = 0 
+Test de Wilcoxon entre poids et grp_conso_eau_jr : Statistique = 339222 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre poids et grp_act_physique : Statistique = 12.9539 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_act_physique : Statistique = 36.2169 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de poids en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre poids et grp_tps_use_tech : Statistique = 20.0996 , p-value = 0 
+Test Kruskal-Wallis entre poids et grp_tps_use_tech : Statistique = 46.5553 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre freq_conso_legumes et sexe : Statistique = 13.0886 , p-value = 0 
+Test de Wilcoxon entre freq_conso_legumes et sexe : Statistique = 757466.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre freq_conso_legumes et ant_fam_obesite : Statistique = 1.7218 , p-value = 0.0857 
+Test de Wilcoxon entre freq_conso_legumes et ant_fam_obesite : Statistique = 350757 , p-value = 0.0788 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre freq_conso_legumes et conso_freq_alim_cal : Statistique = 1.2791 , p-value = 0.2018 
+Test de Wilcoxon entre freq_conso_legumes et conso_freq_alim_cal : Statistique = 239059 , p-value = 0.2303 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre freq_conso_legumes et mange_entre_repas : Statistique = 9.1987 , p-value = 0 
+Test Kruskal-Wallis entre freq_conso_legumes et mange_entre_repas : Statistique = 31.9556 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre freq_conso_legumes et fume : Statistique = -0.682 , p-value = 0.4987 
+Test de Wilcoxon entre freq_conso_legumes et fume : Statistique = 43159 , p-value = 0.5523 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre freq_conso_legumes et surveille_cal_conso : Statistique = -3.2344 , p-value = 0.0016 
+Test de Wilcoxon entre freq_conso_legumes et surveille_cal_conso : Statistique = 77960 , p-value = 0.001 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre freq_conso_legumes et freq_conso_alcool : Statistique = 5.0055 , p-value = 0.0018 
+Test Kruskal-Wallis entre freq_conso_legumes et freq_conso_alcool : Statistique = 29.6017 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre freq_conso_legumes et moy_trans : Statistique = 2.5924 , p-value = 0.0349 
+Test Kruskal-Wallis entre freq_conso_legumes et moy_trans : Statistique = 10.8781 , p-value = 0.028 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre freq_conso_legumes et niv_obesite : Statistique = 112.3155 , p-value = 0 
+Test Kruskal-Wallis entre freq_conso_legumes et niv_obesite : Statistique = 650.0591 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre freq_conso_legumes et grp_imc : Statistique = 111.9024 , p-value = 0 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_imc : Statistique = 559.8366 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre freq_conso_legumes et grp_freq_conso_legumes : Statistique = 10994.24 , p-value = 0 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_freq_conso_legumes : Statistique = 1756.222 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre freq_conso_legumes et grp_age : Statistique = 6.2831 , p-value = 3e-04 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_age : Statistique = 24.8445 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre freq_conso_legumes et grp_nbre_repas_jr : Statistique = 6.8979 , p-value = 0.001 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_nbre_repas_jr : Statistique = 23.6024 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre freq_conso_legumes et grp_conso_eau_jr : Statistique = -4.834 , p-value = 0 
+Test de Wilcoxon entre freq_conso_legumes et grp_conso_eau_jr : Statistique = 480024 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre freq_conso_legumes et grp_act_physique : Statistique = 5.1504 , p-value = 0.0015 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_act_physique : Statistique = 22.1728 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de freq_conso_legumes en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre freq_conso_legumes et grp_tps_use_tech : Statistique = 24.7927 , p-value = 0 
+Test Kruskal-Wallis entre freq_conso_legumes et grp_tps_use_tech : Statistique = 91.7523 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre nbre_repas_jr et sexe : Statistique = -3.1077 , p-value = 0.0019 
+Test de Wilcoxon entre nbre_repas_jr et sexe : Statistique = 549323 , p-value = 0.5454 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre nbre_repas_jr et ant_fam_obesite : Statistique = 2.7398 , p-value = 0.0064 
+Test de Wilcoxon entre nbre_repas_jr et ant_fam_obesite : Statistique = 341961.5 , p-value = 0.3199 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre nbre_repas_jr et conso_freq_alim_cal : Statistique = 0.3036 , p-value = 0.7617 
+Test de Wilcoxon entre nbre_repas_jr et conso_freq_alim_cal : Statistique = 236483.5 , p-value = 0.3291 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre nbre_repas_jr et mange_entre_repas : Statistique = 16.9654 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et mange_entre_repas : Statistique = 42.205 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre nbre_repas_jr et fume : Statistique = -0.3207 , p-value = 0.7499 
+Test de Wilcoxon entre nbre_repas_jr et fume : Statistique = 41806 , p-value = 0.3096 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre nbre_repas_jr et surveille_cal_conso : Statistique = 0.6676 , p-value = 0.5059 
+Test de Wilcoxon entre nbre_repas_jr et surveille_cal_conso : Statistique = 103835 , p-value = 0.1766 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre nbre_repas_jr et freq_conso_alcool : Statistique = 8.4207 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et freq_conso_alcool : Statistique = 20.6658 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre nbre_repas_jr et moy_trans : Statistique = 1.9271 , p-value = 0.1033 
+Test Kruskal-Wallis entre nbre_repas_jr et moy_trans : Statistique = 5.0505 , p-value = 0.2822 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre nbre_repas_jr et niv_obesite : Statistique = 26.8117 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et niv_obesite : Statistique = 230.9508 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre nbre_repas_jr et grp_imc : Statistique = 29.4884 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_imc : Statistique = 203.3325 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre nbre_repas_jr et grp_freq_conso_legumes : Statistique = 8.8955 , p-value = 1e-04 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_freq_conso_legumes : Statistique = 28.3379 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre nbre_repas_jr et grp_age : Statistique = 5.5856 , p-value = 8e-04 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_age : Statistique = 43.8992 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre nbre_repas_jr et grp_nbre_repas_jr : Statistique = 9883.431 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_nbre_repas_jr : Statistique = 1663.944 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre nbre_repas_jr et grp_conso_eau_jr : Statistique = -4.8813 , p-value = 0 
+Test de Wilcoxon entre nbre_repas_jr et grp_conso_eau_jr : Statistique = 495038.5 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre nbre_repas_jr et grp_act_physique : Statistique = 20.2671 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_act_physique : Statistique = 68.3764 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de nbre_repas_jr en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre nbre_repas_jr et grp_tps_use_tech : Statistique = 10.6403 , p-value = 0 
+Test Kruskal-Wallis entre nbre_repas_jr et grp_tps_use_tech : Statistique = 35.0124 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre conso_eau_jr et sexe : Statistique = -4.9809 , p-value = 0 
+Test de Wilcoxon entre conso_eau_jr et sexe : Statistique = 480316 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre conso_eau_jr et ant_fam_obesite : Statistique = 6.3726 , p-value = 0 
+Test de Wilcoxon entre conso_eau_jr et ant_fam_obesite : Statistique = 409207 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre conso_eau_jr et conso_freq_alim_cal : Statistique = -0.4211 , p-value = 0.674 
+Test de Wilcoxon entre conso_eau_jr et conso_freq_alim_cal : Statistique = 218970.5 , p-value = 0.2812 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre conso_eau_jr et mange_entre_repas : Statistique = 31.0438 , p-value = 0 
+Test Kruskal-Wallis entre conso_eau_jr et mange_entre_repas : Statistique = 91.1731 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre conso_eau_jr et fume : Statistique = 1.2969 , p-value = 0.2014 
+Test de Wilcoxon entre conso_eau_jr et fume : Statistique = 51784.5 , p-value = 0.1128 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre conso_eau_jr et surveille_cal_conso : Statistique = -0.3332 , p-value = 0.7397 
+Test de Wilcoxon entre conso_eau_jr et surveille_cal_conso : Statistique = 96292 , p-value = 0.9413 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre conso_eau_jr et freq_conso_alcool : Statistique = 6.0226 , p-value = 4e-04 
+Test Kruskal-Wallis entre conso_eau_jr et freq_conso_alcool : Statistique = 19.3704 , p-value = 2e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre conso_eau_jr et moy_trans : Statistique = 1.4666 , p-value = 0.2098 
+Test Kruskal-Wallis entre conso_eau_jr et moy_trans : Statistique = 4.6739 , p-value = 0.3224 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre conso_eau_jr et niv_obesite : Statistique = 16.1711 , p-value = 0 
+Test Kruskal-Wallis entre conso_eau_jr et niv_obesite : Statistique = 94.7475 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre conso_eau_jr et grp_imc : Statistique = 28.78 , p-value = 0 
+Test Kruskal-Wallis entre conso_eau_jr et grp_imc : Statistique = 128.4583 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre conso_eau_jr et grp_freq_conso_legumes : Statistique = 7.826 , p-value = 4e-04 
+Test Kruskal-Wallis entre conso_eau_jr et grp_freq_conso_legumes : Statistique = 12.8869 , p-value = 0.0016 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre conso_eau_jr et grp_age : Statistique = 13.0994 , p-value = 0 
+Test Kruskal-Wallis entre conso_eau_jr et grp_age : Statistique = 40.0563 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre conso_eau_jr et grp_nbre_repas_jr : Statistique = 2.5296 , p-value = 0.0799 
+Test Kruskal-Wallis entre conso_eau_jr et grp_nbre_repas_jr : Statistique = 7.9118 , p-value = 0.0191 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre conso_eau_jr et grp_conso_eau_jr : Statistique = -59.2839 , p-value = 0 
+Test de Wilcoxon entre conso_eau_jr et grp_conso_eau_jr : Statistique = 0 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre conso_eau_jr et grp_act_physique : Statistique = 23.8223 , p-value = 0 
+Test Kruskal-Wallis entre conso_eau_jr et grp_act_physique : Statistique = 66.6928 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de conso_eau_jr en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre conso_eau_jr et grp_tps_use_tech : Statistique = 1.3152 , p-value = 0.2677 
+Test Kruskal-Wallis entre conso_eau_jr et grp_tps_use_tech : Statistique = 3.918 , p-value = 0.2705 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre act_physique et sexe : Statistique = -8.8671 , p-value = 0 
+Test de Wilcoxon entre act_physique et sexe : Statistique = 432651.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre act_physique et ant_fam_obesite : Statistique = -2.4315 , p-value = 0.0154 
+Test de Wilcoxon entre act_physique et ant_fam_obesite : Statistique = 311017 , p-value = 0.0485 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre act_physique et conso_freq_alim_cal : Statistique = 4.5131 , p-value = 0 
+Test de Wilcoxon entre act_physique et conso_freq_alim_cal : Statistique = 266684 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre act_physique et mange_entre_repas : Statistique = 1.736 , p-value = 0.1575 
+Test Kruskal-Wallis entre act_physique et mange_entre_repas : Statistique = 3.154 , p-value = 0.3685 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre act_physique et fume : Statistique = -0.5144 , p-value = 0.6095 
+Test de Wilcoxon entre act_physique et fume : Statistique = 44795 , p-value = 0.8647 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre act_physique et surveille_cal_conso : Statistique = -3.0584 , p-value = 0.0028 
+Test de Wilcoxon entre act_physique et surveille_cal_conso : Statistique = 79456.5 , p-value = 0.003 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre act_physique et freq_conso_alcool : Statistique = 13.5675 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et freq_conso_alcool : Statistique = 29.2522 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre act_physique et moy_trans : Statistique = 9.0561 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et moy_trans : Statistique = 23.5195 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre act_physique et niv_obesite : Statistique = 17.4842 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et niv_obesite : Statistique = 88.4203 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre act_physique et grp_imc : Statistique = 15.9039 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et grp_imc : Statistique = 63.5729 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre act_physique et grp_freq_conso_legumes : Statistique = 2.2099 , p-value = 0.11 
+Test Kruskal-Wallis entre act_physique et grp_freq_conso_legumes : Statistique = 8.7643 , p-value = 0.0125 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre act_physique et grp_age : Statistique = 23.0836 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et grp_age : Statistique = 72.8967 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre act_physique et grp_nbre_repas_jr : Statistique = 44.3672 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et grp_nbre_repas_jr : Statistique = 96.2795 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre act_physique et grp_conso_eau_jr : Statistique = -4.304 , p-value = 0 
+Test de Wilcoxon entre act_physique et grp_conso_eau_jr : Statistique = 479764.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre act_physique et grp_act_physique : Statistique = 11655.38 , p-value = 0 
+Test Kruskal-Wallis entre act_physique et grp_act_physique : Statistique = 1908.764 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de act_physique en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre act_physique et grp_tps_use_tech : Statistique = 5.4329 , p-value = 0.001 
+Test Kruskal-Wallis entre act_physique et grp_tps_use_tech : Statistique = 23.959 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre tps_use_tech et sexe : Statistique = -0.7943 , p-value = 0.4271 
+Test de Wilcoxon entre tps_use_tech et sexe : Statistique = 550252.5 , p-value = 0.6282 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre tps_use_tech et ant_fam_obesite : Statistique = 1.0181 , p-value = 0.3091 
+Test de Wilcoxon entre tps_use_tech et ant_fam_obesite : Statistique = 349194 , p-value = 0.1134 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre tps_use_tech et conso_freq_alim_cal : Statistique = -3.0236 , p-value = 0.0027 
+Test de Wilcoxon entre tps_use_tech et conso_freq_alim_cal : Statistique = 192858.5 , p-value = 1e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre tps_use_tech et mange_entre_repas : Statistique = 9.0079 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et mange_entre_repas : Statistique = 32.2948 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre tps_use_tech et fume : Statistique = -0.6444 , p-value = 0.5227 
+Test de Wilcoxon entre tps_use_tech et fume : Statistique = 44366 , p-value = 0.7796 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre tps_use_tech et surveille_cal_conso : Statistique = 0.4084 , p-value = 0.6839 
+Test de Wilcoxon entre tps_use_tech et surveille_cal_conso : Statistique = 106000.5 , p-value = 0.1079 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre tps_use_tech et freq_conso_alcool : Statistique = 9.8931 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et freq_conso_alcool : Statistique = 18.2843 , p-value = 4e-04 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre tps_use_tech et moy_trans : Statistique = 20.1052 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et moy_trans : Statistique = 94.1974 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre tps_use_tech et niv_obesite : Statistique = 7.8767 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et niv_obesite : Statistique = 45.037 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre tps_use_tech et grp_imc : Statistique = 8.2107 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et grp_imc : Statistique = 35.017 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre tps_use_tech et grp_freq_conso_legumes : Statistique = 8.5522 , p-value = 2e-04 
+Test Kruskal-Wallis entre tps_use_tech et grp_freq_conso_legumes : Statistique = 13.2114 , p-value = 0.0014 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre tps_use_tech et grp_age : Statistique = 58.7187 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et grp_age : Statistique = 198.7799 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre tps_use_tech et grp_nbre_repas_jr : Statistique = 1.4951 , p-value = 0.2245 
+Test Kruskal-Wallis entre tps_use_tech et grp_nbre_repas_jr : Statistique = 9.7483 , p-value = 0.0076 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre tps_use_tech et grp_conso_eau_jr : Statistique = 0.1305 , p-value = 0.8962 
+Test de Wilcoxon entre tps_use_tech et grp_conso_eau_jr : Statistique = 535578 , p-value = 0.5385 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre tps_use_tech et grp_act_physique : Statistique = 7.254 , p-value = 1e-04 
+Test Kruskal-Wallis entre tps_use_tech et grp_act_physique : Statistique = 15.9492 , p-value = 0.0012 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de tps_use_tech en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre tps_use_tech et grp_tps_use_tech : Statistique = 9741.861 , p-value = 0 
+Test Kruskal-Wallis entre tps_use_tech et grp_tps_use_tech : Statistique = 1855.014 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de sexe 
+
+femme homme 
+ 1043  1068 
+Test t de Student entre imc et sexe : Statistique = 2.4282 , p-value = 0.0153 
+Test de Wilcoxon entre imc et sexe : Statistique = 568467 , p-value = 0.4113 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de ant_fam_obesite 
+
+ non  oui 
+ 385 1726 
+Test t de Student entre imc et ant_fam_obesite : Statistique = 35.7676 , p-value = 0 
+Test de Wilcoxon entre imc et ant_fam_obesite : Statistique = 579810 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de conso_freq_alim_cal 
+
+ non  oui 
+ 245 1866 
+Test t de Student entre imc et conso_freq_alim_cal : Statistique = -16.4352 , p-value = 0 
+Test de Wilcoxon entre imc et conso_freq_alim_cal : Statistique = 125896 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de mange_entre_repas 
+
+   toujours frequemment         non     souvent 
+         53         242          51        1765 
+Test ANOVA entre imc et mange_entre_repas : Statistique = 159.9893 , p-value = 0 
+Test Kruskal-Wallis entre imc et mange_entre_repas : Statistique = 409.6589 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de fume 
+
+ non  oui 
+2067   44 
+Test t de Student entre imc et fume : Statistique = 0.0455 , p-value = 0.9639 
+Test de Wilcoxon entre imc et fume : Statistique = 45056.5 , p-value = 0.917 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de surveille_cal_conso 
+
+ non  oui 
+2015   96 
+Test t de Student entre imc et surveille_cal_conso : Statistique = 15.7653 , p-value = 0 
+Test de Wilcoxon entre imc et surveille_cal_conso : Statistique = 150645.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de freq_conso_alcool 
+
+   toujours frequemment         non     souvent 
+          1          70         639        1401 
+Test ANOVA entre imc et freq_conso_alcool : Statistique = 41.3961 , p-value = 0 
+Test Kruskal-Wallis entre imc et freq_conso_alcool : Statistique = 98.2987 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de moy_trans 
+
+          automobile                 velo                 moto transports_en_commun               marche 
+                 457                    7                   11                 1580                   56 
+Test ANOVA entre imc et moy_trans : Statistique = 10.8752 , p-value = 0 
+Test Kruskal-Wallis entre imc et moy_trans : Statistique = 46.4791 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de niv_obesite 
+
+    sous_poids         normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2 
+           272            287            351            297            324            290            290 
+Test ANOVA entre imc et niv_obesite : Statistique = 10085.48 , p-value = 0 
+Test Kruskal-Wallis entre imc et niv_obesite : Statistique = 2059.783 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_imc 
+
+  imc_inf_18.5_sousp imc_18.5_24.9_normal     imc_25_29.9_surp  imc_30_34.9_obesmod  imc_35_39.9_obessev  imc_sup_40_obesmass 
+                 267                  300                  566                  370                  340                  268 
+Test ANOVA entre imc et grp_imc : Statistique = 12126.21 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_imc : Statistique = 2034.513 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_freq_conso_legumes 
+
+rarement  souvent toujours 
+     131      903     1077 
+Test ANOVA entre imc et grp_freq_conso_legumes : Statistique = 54.2582 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_freq_conso_legumes : Statistique = 84.2553 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_age 
+
+14_20 20_26 26_35 35_61 
+  585  1028   330   168 
+Test ANOVA entre imc et grp_age : Statistique = 123.9937 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_age : Statistique = 340.0039 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_nbre_repas_jr 
+
+  moins_de_2 entre_2_et_3    plus_de_3 
+         395         1488          228 
+Test ANOVA entre imc et grp_nbre_repas_jr : Statistique = 182.5111 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_nbre_repas_jr : Statistique = 304.5377 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_conso_eau_jr 
+
+entre_1_2L plus_de_2L 
+      1217        894 
+Test t de Student entre imc et grp_conso_eau_jr : Statistique = -12.4874 , p-value = 0 
+Test de Wilcoxon entre imc et grp_conso_eau_jr : Statistique = 375315.5 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_act_physique 
+
+tres_peu      peu    assez frequent 
+     833      663      472      143 
+Test ANOVA entre imc et grp_act_physique : Statistique = 24.1846 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_act_physique : Statistique = 78.5013 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+🔹 Analyse de imc en fonction de grp_tps_use_tech 
+
+moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h 
+          952           755           160           244 
+Test ANOVA entre imc et grp_tps_use_tech : Statistique = 20.2365 , p-value = 0 
+Test Kruskal-Wallis entre imc et grp_tps_use_tech : Statistique = 49.8675 , p-value = 0 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -1,0 +1,1342 @@
+🔹 Analyse entre sexe et ant_fam_obesite 
+[1] "Table de contingence :"
+       
+        non oui
+  femme 232 811
+  homme 153 915
+
+Test du Khi-2 : X² = 21.6561, p-value = 0, V de Cramer = 0.1025 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et conso_freq_alim_cal 
+[1] "Table de contingence :"
+       
+        non oui
+  femme 143 900
+  homme 102 966
+
+Test du Khi-2 : X² = 8.4999, p-value = 0.0036, V de Cramer = 0.0649 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et mange_entre_repas 
+[1] "Table de contingence :"
+       
+        toujours frequemment non souvent
+  femme       23         161  15     844
+  homme       30          81  36     921
+
+Test du Khi-2 : X² = 39.0865, p-value = 0, V de Cramer = 0.1361 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et fume 
+[1] "Table de contingence :"
+       
+         non  oui
+  femme 1028   15
+  homme 1039   29
+
+Test du Khi-2 : X² = 3.615, p-value = 0.0573, V de Cramer = 0.0447 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et surveille_cal_conso 
+[1] "Table de contingence :"
+       
+         non  oui
+  femme  973   70
+  homme 1042   26
+
+Test du Khi-2 : X² = 21.2621, p-value = 0, V de Cramer = 0.1026 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et freq_conso_alcool 
+[1] "Table de contingence :"
+       
+        toujours frequemment non souvent
+  femme        0          28 304     711
+  homme        1          42 335     690
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 5.3234, p-value = 0.1496, V de Cramer = 0.0502 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et moy_trans 
+[1] "Table de contingence :"
+       
+        automobile velo moto transports_en_commun marche
+  femme        166    0    2                  854     21
+  homme        291    7    9                  726     35
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 59.2268, p-value = 0, V de Cramer = 0.1675 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et niv_obesite 
+[1] "Table de contingence :"
+       
+        sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  femme        173    141            156              2            323            145            103
+  homme         99    146            195            295              1            145            187
+
+Test du Khi-2 : X² = 657.7462, p-value = 0, V de Cramer = 0.5582 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_imc 
+[1] "Table de contingence :"
+       
+        imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  femme                170                  153              235                 159                  59                 267
+  homme                 97                  147              331                 211                 281                   1
+
+Test du Khi-2 : X² = 452.4048, p-value = 0, V de Cramer = 0.4629 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+       
+        rarement souvent toujours
+  femme       59     303      681
+  homme       72     600      396
+
+Test du Khi-2 : X² = 174.1206, p-value = 0, V de Cramer = 0.2872 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_age 
+[1] "Table de contingence :"
+       
+        14_20 20_26 26_35 35_61
+  femme   310   557    75   101
+  homme   275   471   255    67
+
+Test du Khi-2 : X² = 114.0713, p-value = 0, V de Cramer = 0.2325 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+       
+        moins_de_2 entre_2_et_3 plus_de_3
+  femme        225          718       100
+  homme        170          770       128
+
+Test du Khi-2 : X² = 12.6197, p-value = 0.0018, V de Cramer = 0.0773 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_conso_eau_jr 
+[1] "Table de contingence :"
+       
+        entre_1_2L plus_de_2L
+  femme        646        397
+  homme        571        497
+
+Test du Khi-2 : X² = 15.1687, p-value = 1e-04, V de Cramer = 0.0857 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_act_physique 
+[1] "Table de contingence :"
+       
+        tres_peu peu assez frequent
+  femme      525 255   215       48
+  homme      308 408   257       95
+
+Test du Khi-2 : X² = 110.7414, p-value = 0, V de Cramer = 0.229 
+-------------------------------------------------- 
+
+🔹 Analyse entre sexe et grp_tps_use_tech 
+[1] "Table de contingence :"
+       
+        moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  femme           450           433            60           100
+  homme           502           322           100           144
+
+Test du Khi-2 : X² = 36.8031, p-value = 0, V de Cramer = 0.132 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et conso_freq_alim_cal 
+[1] "Table de contingence :"
+     
+       non  oui
+  non   99  286
+  oui  146 1580
+
+Test du Khi-2 : X² = 89.6872, p-value = 0, V de Cramer = 0.208 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et mange_entre_repas 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non       19         114   33     219
+  oui       34         128   18    1546
+
+Test du Khi-2 : X² = 260.3644, p-value = 0, V de Cramer = 0.3512 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et fume 
+[1] "Table de contingence :"
+     
+       non  oui
+  non  379    6
+  oui 1688   38
+
+Test du Khi-2 : X² = 0.3618, p-value = 0.5475, V de Cramer = 0.0174 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et surveille_cal_conso 
+[1] "Table de contingence :"
+     
+       non  oui
+  non  336   49
+  oui 1679   47
+
+Test du Khi-2 : X² = 70.2923, p-value = 0, V de Cramer = 0.1854 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et freq_conso_alcool 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non        0          16  104     265
+  oui        1          54  535    1136
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 3.3059, p-value = 0.3468, V de Cramer = 0.0396 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et moy_trans 
+[1] "Table de contingence :"
+     
+      automobile velo moto transports_en_commun marche
+  non         50    2    5                  309     19
+  oui        407    5    6                 1271     37
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 33.3734, p-value = 0, V de Cramer = 0.1257 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et niv_obesite 
+[1] "Table de contingence :"
+     
+      sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  non        146    132              7              1              0             81             18
+  oui        126    155            344            296            324            209            272
+
+Test du Khi-2 : X² = 621.9794, p-value = 0, V de Cramer = 0.5428 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_imc 
+[1] "Table de contingence :"
+     
+      imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  non                145                  138               93                   8                   1                   0
+  oui                122                  162              473                 362                 339                 268
+
+Test du Khi-2 : X² = 586.5665, p-value = 0, V de Cramer = 0.5271 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+     
+      rarement souvent toujours
+  non       36     163      186
+  oui       95     740      891
+
+Test du Khi-2 : X² = 8.2029, p-value = 0.0165, V de Cramer = 0.0623 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_age 
+[1] "Table de contingence :"
+     
+      14_20 20_26 26_35 35_61
+  non   209   136    26    14
+  oui   376   892   304   154
+
+Test du Khi-2 : X² = 172.0819, p-value = 0, V de Cramer = 0.2855 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+     
+      moins_de_2 entre_2_et_3 plus_de_3
+  non        109          207        69
+  oui        286         1281       159
+
+Test du Khi-2 : X² = 63.9829, p-value = 0, V de Cramer = 0.1741 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_conso_eau_jr 
+[1] "Table de contingence :"
+     
+      entre_1_2L plus_de_2L
+  non        295         90
+  oui        922        804
+
+Test du Khi-2 : X² = 68.4796, p-value = 0, V de Cramer = 0.1814 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_act_physique 
+[1] "Table de contingence :"
+     
+      tres_peu peu assez frequent
+  non      135 118    95       37
+  oui      698 545   377      106
+
+Test du Khi-2 : X² = 9.1131, p-value = 0.0278, V de Cramer = 0.0657 
+-------------------------------------------------- 
+
+🔹 Analyse entre ant_fam_obesite et grp_tps_use_tech 
+[1] "Table de contingence :"
+     
+      moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  non           184           145            15            41
+  oui           768           610           145           203
+
+Test du Khi-2 : X² = 9.9973, p-value = 0.0186, V de Cramer = 0.0688 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et mange_entre_repas 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non       12          67    9     157
+  oui       41         175   42    1608
+
+Test du Khi-2 : X² = 81.7421, p-value = 0, V de Cramer = 0.1968 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et fume 
+[1] "Table de contingence :"
+     
+       non  oui
+  non  235   10
+  oui 1832   34
+
+Test du Khi-2 : X² = 4.3672, p-value = 0.0366, V de Cramer = 0.0507 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et surveille_cal_conso 
+[1] "Table de contingence :"
+     
+       non  oui
+  non  207   38
+  oui 1808   58
+
+Test du Khi-2 : X² = 73.9056, p-value = 0, V de Cramer = 0.1907 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et freq_conso_alcool 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non        0          15  112     118
+  oui        1          55  527    1283
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 42.3942, p-value = 0, V de Cramer = 0.1417 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et moy_trans 
+[1] "Table de contingence :"
+     
+      automobile velo moto transports_en_commun marche
+  non         37    4    3                  175     26
+  oui        420    3    8                 1405     30
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 88.8931, p-value = 0, V de Cramer = 0.2052 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et niv_obesite 
+[1] "Table de contingence :"
+     
+      sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  non         51     79             11              7              1             22             74
+  oui        221    208            340            290            323            268            216
+
+Test du Khi-2 : X² = 233.3413, p-value = 0, V de Cramer = 0.3325 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_imc 
+[1] "Table de contingence :"
+     
+      imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  non                 51                   79               92                  15                   7                   1
+  oui                216                  221              474                 355                 333                 267
+
+Test du Khi-2 : X² = 173.7079, p-value = 0, V de Cramer = 0.2869 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+     
+      rarement souvent toujours
+  non        8     111      126
+  oui      123     792      951
+
+Test du Khi-2 : X² = 4.2853, p-value = 0.1173, V de Cramer = 0.0451 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_age 
+[1] "Table de contingence :"
+     
+      14_20 20_26 26_35 35_61
+  non   103    99    26    17
+  oui   482   929   304   151
+
+Test du Khi-2 : X² = 29.2762, p-value = 0, V de Cramer = 0.1178 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+     
+      moins_de_2 entre_2_et_3 plus_de_3
+  non         48          163        34
+  oui        347         1325       194
+
+Test du Khi-2 : X² = 3.1602, p-value = 0.206, V de Cramer = 0.0387 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_conso_eau_jr 
+[1] "Table de contingence :"
+     
+      entre_1_2L plus_de_2L
+  non        176         69
+  oui       1041        825
+
+Test du Khi-2 : X² = 22.1945, p-value = 0, V de Cramer = 0.104 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_act_physique 
+[1] "Table de contingence :"
+     
+      tres_peu peu assez frequent
+  non       71  78    65       31
+  oui      762 585   407      112
+
+Test du Khi-2 : X² = 24.0303, p-value = 0, V de Cramer = 0.1067 
+-------------------------------------------------- 
+
+🔹 Analyse entre conso_freq_alim_cal et grp_tps_use_tech 
+[1] "Table de contingence :"
+     
+      moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  non           132            84             8            21
+  oui           820           671           152           223
+
+Test du Khi-2 : X² = 13.8533, p-value = 0.0031, V de Cramer = 0.081 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et fume 
+[1] "Table de contingence :"
+             
+               non  oui
+  toujours      50    3
+  frequemment  233    9
+  non           50    1
+  souvent     1734   31
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 7.4235, p-value = 0.0596, V de Cramer = 0.0593 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et surveille_cal_conso 
+[1] "Table de contingence :"
+             
+               non  oui
+  toujours      45    8
+  frequemment  215   27
+  non           44    7
+  souvent     1711   54
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 56.8363, p-value = 0, V de Cramer = 0.1641 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et freq_conso_alcool 
+[1] "Table de contingence :"
+             
+              toujours frequemment  non souvent
+  toujours           0           7   18      28
+  frequemment        1          16  105     120
+  non                0           2    7      42
+  souvent            0          45  509    1211
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 69.3093, p-value = 0, V de Cramer = 0.1046 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et moy_trans 
+[1] "Table de contingence :"
+             
+              automobile velo moto transports_en_commun marche
+  toujours            12    1    1                   33      6
+  frequemment         25    0    5                  201     11
+  non                  3    0    0                   46      2
+  souvent            417    6    5                 1300     37
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 69.2837, p-value = 0, V de Cramer = 0.1046 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et niv_obesite 
+[1] "Table de contingence :"
+             
+              sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  toujours             2     35              6              2              0              5              3
+  frequemment        121     83              6              1              1             14             16
+  non                  3     10              1              1              0             35              1
+  souvent            146    159            338            293            323            236            270
+
+Test du Khi-2 : X² = 802.9773, p-value = 0, V de Cramer = 0.3561 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_imc 
+[1] "Table de contingence :"
+             
+              imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  toujours                     2                   34                9                   6                   2                   0
+  frequemment                118                   86               29                   7                   1                   1
+  non                          3                   10               36                   1                   1                   0
+  souvent                    144                  170              492                 356                 336                 267
+
+Test du Khi-2 : X² = 692.0487, p-value = 0, V de Cramer = 0.3306 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+             
+              rarement souvent toujours
+  toujours           6      22       25
+  frequemment       17      81      144
+  non                5      38        8
+  souvent          103     762      900
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 36.988, p-value = 0, V de Cramer = 0.0936 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_age 
+[1] "Table de contingence :"
+             
+              14_20 20_26 26_35 35_61
+  toujours       19    26     5     3
+  frequemment    97   120    15    10
+  non             6    42     3     0
+  souvent       463   840   307   155
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 65.1021, p-value = 0, V de Cramer = 0.1014 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+             
+              moins_de_2 entre_2_et_3 plus_de_3
+  toujours            10           33        10
+  frequemment         49          136        57
+  non                 29           15         7
+  souvent            307         1304       154
+
+Test du Khi-2 : X² = 111.3032, p-value = 0, V de Cramer = 0.1624 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_conso_eau_jr 
+[1] "Table de contingence :"
+             
+              entre_1_2L plus_de_2L
+  toujours            43         10
+  frequemment        188         54
+  non                 11         40
+  souvent            975        790
+
+Test du Khi-2 : X² = 83.1518, p-value = 0, V de Cramer = 0.1985 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_act_physique 
+[1] "Table de contingence :"
+             
+              tres_peu peu assez frequent
+  toujours          22  11    11        9
+  frequemment       85  76    64       17
+  non                8  33     7        3
+  souvent          718 543   390      114
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 41.4481, p-value = 0, V de Cramer = 0.0809 
+-------------------------------------------------- 
+
+🔹 Analyse entre mange_entre_repas et grp_tps_use_tech 
+[1] "Table de contingence :"
+             
+              moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  toujours               25            17             0            11
+  frequemment           114            91             8            29
+  non                    42             7             2             0
+  souvent               771           640           150           204
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 46.7521, p-value = 0, V de Cramer = 0.0859 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et surveille_cal_conso 
+[1] "Table de contingence :"
+     
+       non  oui
+  non 1976   91
+  oui   39    5
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 3.3395, p-value = 0.0676, V de Cramer = 0.0477 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et freq_conso_alcool 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non        1          63  633    1370
+  oui        0           7    6      31
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 25.7329, p-value = 0, V de Cramer = 0.1104 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et moy_trans 
+[1] "Table de contingence :"
+     
+      automobile velo moto transports_en_commun marche
+  non        446    7   10                 1550     54
+  oui         11    0    1                   30      2
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 3.9016, p-value = 0.4195, V de Cramer = 0.043 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et niv_obesite 
+[1] "Table de contingence :"
+     
+      sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  non        271    274            345            282            323            287            285
+  oui          1     13              6             15              1              3              5
+
+Test du Khi-2 : X² = 32.1378, p-value = 0, V de Cramer = 0.1234 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_imc 
+[1] "Table de contingence :"
+     
+      imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  non                266                  287              558                 364                 325                 267
+  oui                  1                   13                8                   6                  15                   1
+
+Test du Khi-2 : X² = 25.7657, p-value = 1e-04, V de Cramer = 0.1105 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+     
+      rarement souvent toujours
+  non      130     883     1054
+  oui        1      20       23
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 1.2093, p-value = 0.5463, V de Cramer = 0.0239 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_age 
+[1] "Table de contingence :"
+     
+      14_20 20_26 26_35 35_61
+  non   579  1011   314   163
+  oui     6    17    16     5
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 17.156, p-value = 7e-04, V de Cramer = 0.0901 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+     
+      moins_de_2 entre_2_et_3 plus_de_3
+  non        387         1456       224
+  oui          8           32         4
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 0.1603, p-value = 0.923, V de Cramer = 0.0087 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_conso_eau_jr 
+[1] "Table de contingence :"
+     
+      entre_1_2L plus_de_2L
+  non       1183        884
+  oui         34         10
+
+Test du Khi-2 : X² = 6.2897, p-value = 0.0121, V de Cramer = 0.0579 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_act_physique 
+[1] "Table de contingence :"
+     
+      tres_peu peu assez frequent
+  non      822 641   464      140
+  oui       11  22     8        3
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 7.6782, p-value = 0.0532, V de Cramer = 0.0603 
+-------------------------------------------------- 
+
+🔹 Analyse entre fume et grp_tps_use_tech 
+[1] "Table de contingence :"
+     
+      moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  non           931           745           155           236
+  oui            21            10             5             8
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 4.7592, p-value = 0.1903, V de Cramer = 0.0475 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et freq_conso_alcool 
+[1] "Table de contingence :"
+     
+      toujours frequemment  non souvent
+  non        1          62  606    1346
+  oui        0           8   33      55
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 9.4909, p-value = 0.0234, V de Cramer = 0.0671 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et moy_trans 
+[1] "Table de contingence :"
+     
+      automobile velo moto transports_en_commun marche
+  non        444    6    9                 1506     50
+  oui         13    1    2                   74      6
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 14.2663, p-value = 0.0065, V de Cramer = 0.0822 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et niv_obesite 
+[1] "Table de contingence :"
+     
+      sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  non        250    257            349            296            324            253            286
+  oui         22     30              2              1              0             37              4
+
+Test du Khi-2 : X² = 123.0239, p-value = 0, V de Cramer = 0.2414 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_imc 
+[1] "Table de contingence :"
+     
+      imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  non                245                  264              531                 368                 339                 268
+  oui                 22                   36               35                   2                   1                   0
+
+Test du Khi-2 : X² = 90.884, p-value = 0, V de Cramer = 0.2075 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+     
+      rarement souvent toujours
+  non      126     877     1012
+  oui        5      26       65
+
+Test du Khi-2 : X² = 11.4423, p-value = 0.0033, V de Cramer = 0.0736 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_age 
+[1] "Table de contingence :"
+     
+      14_20 20_26 26_35 35_61
+  non   521  1004   324   166
+  oui    64    24     6     2
+
+Test du Khi-2 : X² = 76.6959, p-value = 0, V de Cramer = 0.1906 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+     
+      moins_de_2 entre_2_et_3 plus_de_3
+  non        376         1418       221
+  oui         19           70         7
+
+Test du Khi-2 : X² = 1.2934, p-value = 0.5238, V de Cramer = 0.0248 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_conso_eau_jr 
+[1] "Table de contingence :"
+     
+      entre_1_2L plus_de_2L
+  non       1149        866
+  oui         68         28
+
+Test du Khi-2 : X² = 6.6046, p-value = 0.0102, V de Cramer = 0.0582 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_act_physique 
+[1] "Table de contingence :"
+     
+      tres_peu peu assez frequent
+  non      803 634   449      129
+  oui       30  29    23       14
+
+Test du Khi-2 : X² = 10.9334, p-value = 0.0121, V de Cramer = 0.072 
+-------------------------------------------------- 
+
+🔹 Analyse entre surveille_cal_conso et grp_tps_use_tech 
+[1] "Table de contingence :"
+     
+      moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  non           898           738           153           226
+  oui            54            17             7            18
+
+Test du Khi-2 : X² = 16.4537, p-value = 9e-04, V de Cramer = 0.0883 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et moy_trans 
+[1] "Table de contingence :"
+             
+              automobile velo moto transports_en_commun marche
+  toujours             0    0    0                    0      1
+  frequemment         29    0    0                   38      3
+  non                157    3    5                  451     23
+  souvent            271    4    6                 1091     29
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 69.3066, p-value = 0, V de Cramer = 0.1046 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et niv_obesite 
+[1] "Table de contingence :"
+             
+              sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  toujours             0      1              0              0              0              0              0
+  frequemment          1     18             14              2              0             16             19
+  non                117    107            165             71              1             50            128
+  souvent            154    161            172            224            323            224            143
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 338.5775, p-value = 0, V de Cramer = 0.2312 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_imc 
+[1] "Table de contingence :"
+             
+              imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  toujours                     0                    1                0                   0                   0                   0
+  frequemment                  1                   18               35                  14                   2                   0
+  non                        114                  111              174                 171                  68                   1
+  souvent                    152                  170              357                 185                 270                 267
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 267.6198, p-value = 0, V de Cramer = 0.2056 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+             
+              rarement souvent toujours
+  toujours           0       1        0
+  frequemment        3      37       30
+  non               27     323      289
+  souvent          101     542      758
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 31.9577, p-value = 0, V de Cramer = 0.087 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_age 
+[1] "Table de contingence :"
+             
+              14_20 20_26 26_35 35_61
+  toujours        0     1     0     0
+  frequemment    20    21    14    15
+  non           209   282    89    59
+  souvent       356   724   227    94
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 42.1633, p-value = 0, V de Cramer = 0.0816 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+             
+              moins_de_2 entre_2_et_3 plus_de_3
+  toujours             1            0         0
+  frequemment         15           53         2
+  non                170          369       100
+  souvent            209         1066       126
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 80.1268, p-value = 0, V de Cramer = 0.1378 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_conso_eau_jr 
+[1] "Table de contingence :"
+             
+              entre_1_2L plus_de_2L
+  toujours             1          0
+  frequemment         40         30
+  non                427        212
+  souvent            749        652
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 32.8311, p-value = 0, V de Cramer = 0.1247 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_act_physique 
+[1] "Table de contingence :"
+             
+              tres_peu peu assez frequent
+  toujours           0   1     0        0
+  frequemment       19  23    19        9
+  non              227 178   160       74
+  souvent          587 461   293       60
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 55.6412, p-value = 0, V de Cramer = 0.0937 
+-------------------------------------------------- 
+
+🔹 Analyse entre freq_conso_alcool et grp_tps_use_tech 
+[1] "Table de contingence :"
+             
+              moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  toujours                0             0             0             1
+  frequemment            22            33             3            12
+  non                   277           175            84           103
+  souvent               653           547            73           128
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 88.9737, p-value = 0, V de Cramer = 0.1185 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et niv_obesite 
+[1] "Table de contingence :"
+                      
+                       sous_poids normal obesite_type_1 obesite_type_2 obesite_type_3 surpoids_niv_1 surpoids_niv_2
+  automobile                   46     45            110             95              1             66             94
+  velo                          0      4              0              1              0              2              0
+  moto                          0      6              3              0              0              1              1
+  transports_en_commun        220    200            236            200            323            212            189
+  marche                        6     32              2              1              0              9              6
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 292.5939, p-value = 0, V de Cramer = 0.1861 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_imc 
+[1] "Table de contingence :"
+                      
+                       imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  automobile                           44                   49              157                 109                  97                   1
+  velo                                  0                    4                2                   0                   1                   0
+  moto                                  0                    6                2                   3                   0                   0
+  transports_en_commun                217                  209              391                 255                 241                 267
+  marche                                6                   32               14                   3                   1                   0
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 242.2972, p-value = 0, V de Cramer = 0.1694 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+                      
+                       rarement souvent toujours
+  automobile                 21     229      207
+  velo                        1       4        2
+  moto                        1       5        5
+  transports_en_commun      107     637      836
+  marche                      1      28       27
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 19.2814, p-value = 0.0134, V de Cramer = 0.0676 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_age 
+[1] "Table de contingence :"
+                      
+                       14_20 20_26 26_35 35_61
+  automobile              59    45   197   156
+  velo                     3     2     1     1
+  moto                     3     5     1     2
+  transports_en_commun   493   956   123     8
+  marche                  27    20     8     1
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 1033.1153, p-value = 0, V de Cramer = 0.4039 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+                      
+                       moins_de_2 entre_2_et_3 plus_de_3
+  automobile                   77          313        67
+  velo                          0            7         0
+  moto                          2            8         1
+  transports_en_commun        305         1122       153
+  marche                       11           38         7
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 12.7952, p-value = 0.1191, V de Cramer = 0.0551 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_conso_eau_jr 
+[1] "Table de contingence :"
+                      
+                       entre_1_2L plus_de_2L
+  automobile                  265        192
+  velo                          5          2
+  moto                          7          4
+  transports_en_commun        899        681
+  marche                       41         15
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 6.6487, p-value = 0.1557, V de Cramer = 0.0561 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_act_physique 
+[1] "Table de contingence :"
+                      
+                       tres_peu peu assez frequent
+  automobile                201 110   113       33
+  velo                        1   1     2        3
+  moto                        7   1     1        2
+  transports_en_commun      613 535   341       91
+  marche                     11  16    15       14
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 72.8882, p-value = 0, V de Cramer = 0.1073 
+-------------------------------------------------- 
+
+🔹 Analyse entre moy_trans et grp_tps_use_tech 
+[1] "Table de contingence :"
+                      
+                       moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  automobile                     280           114            27            36
+  velo                             5             1             0             1
+  moto                            10             1             0             0
+  transports_en_commun           636           621           133           190
+  marche                          21            18             0            17
+Avis : L’approximation du Chi-2 est peut-être incorrecte
+Test du Khi-2 : X² = 98.2747, p-value = 0, V de Cramer = 0.1246 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_imc 
+[1] "Table de contingence :"
+                
+                 imc_inf_18.5_sousp imc_18.5_24.9_normal imc_25_29.9_surp imc_30_34.9_obesmod imc_35_39.9_obessev imc_sup_40_obesmass
+  sous_poids                    267                    5                0                   0                   0                   0
+  normal                          0                  286                1                   0                   0                   0
+  obesite_type_1                  0                    0                0                 348                   3                   0
+  obesite_type_2                  0                    0                0                  16                 281                   0
+  obesite_type_3                  0                    0                0                   0                  56                 268
+  surpoids_niv_1                  0                    9              281                   0                   0                   0
+  surpoids_niv_2                  0                    0              284                   6                   0                   0
+
+Test du Khi-2 : X² = 9453.3418, p-value = 0, V de Cramer = 0.9464 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+                
+                 rarement souvent toujours
+  sous_poids           29      64      179
+  normal               18     155      114
+  obesite_type_1       20     234       97
+  obesite_type_2       33     105      159
+  obesite_type_3        0       0      324
+  surpoids_niv_1       17     169      104
+  surpoids_niv_2       14     176      100
+
+Test du Khi-2 : X² = 538.5237, p-value = 0, V de Cramer = 0.3571 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_age 
+[1] "Table de contingence :"
+                
+                 14_20 20_26 26_35 35_61
+  sous_poids       180    87     4     1
+  normal           132   129    19     7
+  obesite_type_1    76   163    42    70
+  obesite_type_2     1   128   139    29
+  obesite_type_3    43   281     0     0
+  surpoids_niv_1    94   129    45    22
+  surpoids_niv_2    59   111    81    39
+
+Test du Khi-2 : X² = 867.8125, p-value = 0, V de Cramer = 0.3702 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+                
+                 moins_de_2 entre_2_et_3 plus_de_3
+  sous_poids             49          112       111
+  normal                 52          206        29
+  obesite_type_1        100          251         0
+  obesite_type_2         33          252        12
+  obesite_type_3          0          324         0
+  surpoids_niv_1         86          148        56
+  surpoids_niv_2         75          195        20
+
+Test du Khi-2 : X² = 548.2566, p-value = 0, V de Cramer = 0.3604 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_conso_eau_jr 
+[1] "Table de contingence :"
+                
+                 entre_1_2L plus_de_2L
+  sous_poids            182         90
+  normal                247         40
+  obesite_type_1        174        177
+  obesite_type_2        148        149
+  obesite_type_3        111        213
+  surpoids_niv_1        161        129
+  surpoids_niv_2        194         96
+
+Test du Khi-2 : X² = 204.5735, p-value = 0, V de Cramer = 0.3113 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_act_physique 
+[1] "Table de contingence :"
+                
+                 tres_peu peu assez frequent
+  sous_poids           90  54   110       18
+  normal               80  97    69       41
+  obesite_type_1      151 103    65       32
+  obesite_type_2       98 136    63        0
+  obesite_type_3      193  62    69        0
+  surpoids_niv_1      104 106    51       29
+  surpoids_niv_2      117 105    45       23
+
+Test du Khi-2 : X² = 228.9445, p-value = 0, V de Cramer = 0.1901 
+-------------------------------------------------- 
+
+🔹 Analyse entre niv_obesite et grp_tps_use_tech 
+[1] "Table de contingence :"
+                
+                 moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  sous_poids                94            97            30            51
+  normal                   129           122             0            36
+  obesite_type_1           169            84            37            61
+  obesite_type_2           173            61            42            21
+  obesite_type_3           109           215             0             0
+  surpoids_niv_1           164            60            22            44
+  surpoids_niv_2           114           116            29            31
+
+Test du Khi-2 : X² = 322.6986, p-value = 0, V de Cramer = 0.2257 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_freq_conso_legumes 
+[1] "Table de contingence :"
+                      
+                       rarement souvent toujours
+  imc_inf_18.5_sousp         29      63      175
+  imc_18.5_24.9_normal       18     161      121
+  imc_25_29.9_surp           31     338      197
+  imc_30_34.9_obesmod        20     239      111
+  imc_35_39.9_obessev        33     102      205
+  imc_sup_40_obesmass         0       0      268
+
+Test du Khi-2 : X² = 482.3225, p-value = 0, V de Cramer = 0.338 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_age 
+[1] "Table de contingence :"
+                      
+                       14_20 20_26 26_35 35_61
+  imc_inf_18.5_sousp     179    84     3     1
+  imc_18.5_24.9_normal   139   132    21     8
+  imc_25_29.9_surp       142   240   125    59
+  imc_30_34.9_obesmod     81   171    48    70
+  imc_35_39.9_obessev      1   176   133    30
+  imc_sup_40_obesmass     43   225     0     0
+
+Test du Khi-2 : X² = 730.2218, p-value = 0, V de Cramer = 0.3396 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+                      
+                       moins_de_2 entre_2_et_3 plus_de_3
+  imc_inf_18.5_sousp           49          110       108
+  imc_18.5_24.9_normal         55          213        32
+  imc_25_29.9_surp            158          336        72
+  imc_30_34.9_obesmod         101          265         4
+  imc_35_39.9_obessev          32          296        12
+  imc_sup_40_obesmass           0          268         0
+
+Test du Khi-2 : X² = 492.1717, p-value = 0, V de Cramer = 0.3414 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_conso_eau_jr 
+[1] "Table de contingence :"
+                      
+                       entre_1_2L plus_de_2L
+  imc_inf_18.5_sousp          178         89
+  imc_18.5_24.9_normal        257         43
+  imc_25_29.9_surp            344        222
+  imc_30_34.9_obesmod         181        189
+  imc_35_39.9_obessev         180        160
+  imc_sup_40_obesmass          77        191
+
+Test du Khi-2 : X² = 214.0484, p-value = 0, V de Cramer = 0.3184 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_act_physique 
+[1] "Table de contingence :"
+                      
+                       tres_peu peu assez frequent
+  imc_inf_18.5_sousp         89  51   109       18
+  imc_18.5_24.9_normal       88 100    71       41
+  imc_25_29.9_surp          214 207    94       51
+  imc_30_34.9_obesmod       151 121    65       33
+  imc_35_39.9_obessev       154 122    64        0
+  imc_sup_40_obesmass       137  62    69        0
+
+Test du Khi-2 : X² = 174.6178, p-value = 0, V de Cramer = 0.1661 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_imc et grp_tps_use_tech 
+[1] "Table de contingence :"
+                      
+                       moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  imc_inf_18.5_sousp              91            95            30            51
+  imc_18.5_24.9_normal           132           125             3            40
+  imc_25_29.9_surp               277           170            48            71
+  imc_30_34.9_obesmod            180            92            37            61
+  imc_35_39.9_obessev            173           104            42            21
+  imc_sup_40_obesmass             99           169             0             0
+
+Test du Khi-2 : X² = 212.9649, p-value = 0, V de Cramer = 0.1834 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_freq_conso_legumes et grp_age 
+[1] "Table de contingence :"
+          
+           14_20 20_26 26_35 35_61
+  rarement    54    65    12     0
+  souvent    241   404   156   102
+  toujours   290   559   162    66
+
+Test du Khi-2 : X² = 47.3154, p-value = 0, V de Cramer = 0.1059 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_freq_conso_legumes et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+          
+           moins_de_2 entre_2_et_3 plus_de_3
+  rarement         18           86        27
+  souvent         202          620        81
+  toujours        175          782       120
+
+Test du Khi-2 : X² = 27.8207, p-value = 0, V de Cramer = 0.0812 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_freq_conso_legumes et grp_conso_eau_jr 
+[1] "Table de contingence :"
+          
+           entre_1_2L plus_de_2L
+  rarement         93         38
+  souvent         538        365
+  toujours        586        491
+
+Test du Khi-2 : X² = 15.558, p-value = 4e-04, V de Cramer = 0.0858 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_freq_conso_legumes et grp_act_physique 
+[1] "Table de contingence :"
+          
+           tres_peu peu assez frequent
+  rarement       55  32    35        9
+  souvent       356 329   148       70
+  toujours      422 302   289       64
+
+Test du Khi-2 : X² = 40.9407, p-value = 0, V de Cramer = 0.0985 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_freq_conso_legumes et grp_tps_use_tech 
+[1] "Table de contingence :"
+          
+           moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  rarement            43            56             7            25
+  souvent            435           242            80           146
+  toujours           474           457            73            73
+
+Test du Khi-2 : X² = 90.0612, p-value = 0, V de Cramer = 0.1461 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_age et grp_nbre_repas_jr 
+[1] "Table de contingence :"
+       
+        moins_de_2 entre_2_et_3 plus_de_3
+  14_20        100          361       124
+  20_26        194          763        71
+  26_35         63          245        22
+  35_61         38          119        11
+
+Test du Khi-2 : X² = 92.3256, p-value = 0, V de Cramer = 0.1479 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_age et grp_conso_eau_jr 
+[1] "Table de contingence :"
+       
+        entre_1_2L plus_de_2L
+  14_20        383        202
+  20_26        535        493
+  26_35        184        146
+  35_61        115         53
+
+Test du Khi-2 : X² = 36.4051, p-value = 0, V de Cramer = 0.1313 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_age et grp_act_physique 
+[1] "Table de contingence :"
+       
+        tres_peu peu assez frequent
+  14_20      159 195   172       59
+  20_26      458 310   198       62
+  26_35      126 121    73       10
+  35_61       90  37    29       12
+
+Test du Khi-2 : X² = 83.0689, p-value = 0, V de Cramer = 0.1145 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_age et grp_tps_use_tech 
+[1] "Table de contingence :"
+       
+        moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  14_20           166           278            45            96
+  20_26           463           371            78           116
+  26_35           189            79            34            28
+  35_61           134            27             3             4
+
+Test du Khi-2 : X² = 183.2414, p-value = 0, V de Cramer = 0.1701 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_nbre_repas_jr et grp_conso_eau_jr 
+[1] "Table de contingence :"
+              
+               entre_1_2L plus_de_2L
+  moins_de_2          270        125
+  entre_2_et_3        809        679
+  plus_de_3           138         90
+
+Test du Khi-2 : X² = 25.8748, p-value = 0, V de Cramer = 0.1107 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_nbre_repas_jr et grp_act_physique 
+[1] "Table de contingence :"
+              
+               tres_peu peu assez frequent
+  moins_de_2        184 133    51       27
+  entre_2_et_3      608 474   308       98
+  plus_de_3          41  56   113       18
+
+Test du Khi-2 : X² = 130.1731, p-value = 0, V de Cramer = 0.1756 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_nbre_repas_jr et grp_tps_use_tech 
+[1] "Table de contingence :"
+              
+               moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  moins_de_2             202            95            37            61
+  entre_2_et_3           652           576           104           156
+  plus_de_3               98            84            19            27
+
+Test du Khi-2 : X² = 31.981, p-value = 0, V de Cramer = 0.087 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_conso_eau_jr et grp_act_physique 
+[1] "Table de contingence :"
+            
+             tres_peu peu assez frequent
+  entre_1_2L      534 339   273       71
+  plus_de_2L      299 324   199       72
+
+Test du Khi-2 : X² = 29.5139, p-value = 0, V de Cramer = 0.1182 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_conso_eau_jr et grp_tps_use_tech 
+[1] "Table de contingence :"
+            
+             moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  entre_1_2L           541           450            88           138
+  plus_de_2L           411           305            72           106
+
+Test du Khi-2 : X² = 2.0222, p-value = 0.5678, V de Cramer = 0.031 
+-------------------------------------------------- 
+
+🔹 Analyse entre grp_act_physique et grp_tps_use_tech 
+[1] "Table de contingence :"
+          
+           moins_de_30mn entre_30mn_1h entre_1h_1h30 entre_1h30_2h
+  tres_peu           394           263            64           112
+  peu                316           234            53            60
+  assez              191           214            24            43
+  frequent            51            44            19            29
+
+Test du Khi-2 : X² = 52.3752, p-value = 0, V de Cramer = 0.0909 
+-------------------------------------------------- 

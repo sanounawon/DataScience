@@ -1,0 +1,1151 @@
+---
+title: "STAT101_NOUNAWON"
+format: html
+editor: visual
+---
+
+# 1. Présentation du projet
+
+## 1.1. Contexte
+
+Pour valider l'UE [STA101](https://formation.cnam.fr/rechercher-par-discipline/analyse-des-donnees-methodes-descriptives-208821.kjsp) du CNAM (Conservatoire national des arts et métiers), une étude de cas donnant lieu à la rédaction d'un rapport, doit être réalisé en mettant oeuvre toutes les techniques vues au cours permettant d'explorer, décrire et interpréter des données dans leur aspect multidimensionnel.
+
+Le présent rapport s'intéresse aux facteurs déterminant un problème de santé publique qu'est l'obésité. Les données étudiées sont issues de [Kaggle](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) : "*ObesityDataSet_raw_and_data_sinthetic.csv*". *A l'origine, elles comprennent des données permettant d'estimer les niveaux d'obésité chez les individus des pays du Mexique, du Pérou et de Colombie, en fonction de leurs habitudes alimentaires et de leur condition physique.*
+
+Le jeu de données comporte initialement 17 variables (dont 8 quantitatives et 9 qualitatives) et 2111 individus âgés de 14 à 61 ans. L'objectif est d'analyser les données au moyen des méthodes descriptives pour répondre à un certain nombre de questions posées sur les facteurs influençant l'obésité.
+
+## 1.2. Problématiques
+
+Grâce aux diverses informations de ce jeu de données, l'étude permettra de comprendre les facteurs influençant les niveaux d'obésité au Mexique, au Pérou et en Colombie en répondant aux questions suivantes :
+
+-   y a-t-il un lien entre le niveau d'obésité et la taille ? et le poids ?
+
+-   le fait qu'un membre de la famille ait souffert ou souffre de surpoids se répercute-t-il niveau d'obésité de l'individu ?
+
+-   est-ce que la consommation fréquente d'aliments riches en calories favorise un niveau élevé d'obésité ?
+
+-   quel est l'effet de la fréquence de consommation de légumes dans les repas sur l'obésité ?
+
+-   le nombre de repas par jour caractérisent-ils la corpulence ? et manger entre les repas ? et le tabagisme ?
+
+-   la consommation d'eau quotidienne décrit-elle l'obésité ?
+
+-   quelle action exercent la surveillance des calories consommées, la pratique d'activité physique et le moyen de transport principal sur la corpulence
+
+-   existe-t-il un lien entre le niveau d'obésité et la fréquence de consommation d'alcool ?
+
+-   le temps passé à utiliser des appareils électroniques agit-il sur niveau d'obésité ?
+
+Avec l'analyse factorielle de correspondances multiples, le tableau disjonctif conjoint conduira à plus de variables, dû au nombre de modalités par variable ; certaines variables quantitatives seront d'ailleurs transformées en qualitatives. Cette analyse factorielle permettra :
+
+-   de réduire la dimensionnalité et ainsi construire de nouvelles variables expliquant les principaux axes
+
+-   d'identifier les ressemblances et oppositions entre les individus, puis visualiser l'ensemble des associations entre les modalités.
+
+Les résultats de l'ACM favoriseront la classification au sens non supervisée des différents groupes pouvant ressortir, à l'aide de l'algorithme CAH (Classification Ascendante Hiérarchique).
+
+## 1.3. Les données
+
+Lire l'article (<https://doi.org/10.1016/j.dib.2019.104344>) pour avoir la description des variables.
+
+## 1.4. Méthodologie
+
+-   Analyse univariée
+
+-   Analyse bivariée
+
+-   Analyse Factorielle (ACM)
+
+-   Classification
+
+# 2. Importation et traitement des données
+
+## 2.1. Chargement des librairies
+
+```{r}
+# Installer les packages si nécessaire
+if (!require("readr")) install.packages("readr")
+if (!require("dplyr")) install.packages("dplyr")
+if (!require("Hmisc")) install.packages("Hmisc")
+if (!require("psych")) install.packages("psych")
+if (!require("moments")) install.packages("moments")
+if (!require("corrplot")) install.packages("corrplot")
+if (!require("FactoMineR")) install.packages("FactoMineR")
+if (!require("devtools")) install.packages("devtools")
+if (!require("factoextra")) install_github("kassambara/factoextra")
+if (!require("ggplot2")) install.packages("ggplot2")
+if (!require("reshape2")) install.packages("reshape2")
+if (!require("stats")) install.packages("stats")
+if (!require("tseries")) install.packages("tseries")
+if (!require("vcd")) install.packages("vcd")
+if (!require("scales")) install.packages("scales")
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("ade4")) install.packages("ade4")
+if (!require("factoextra")) install.packages("factoextra")
+if (!require("cluster")) install.packages("cluster")
+if (!require("WeightedCluster")) install.packages("WeightedCluster")
+if (!require("gtsummary")) install.packages("gtsummary")
+
+# Charger les packages
+library(readr)
+library(dplyr)
+library(Hmisc)
+library(moments)
+library(psych)
+library(corrplot)
+library(FactoMineR)
+library(devtools)
+library(factoextra)
+library(ggplot2)
+library(stats)
+library(reshape2)
+library(tseries)
+library(vcd)        # Pour assocstats et V de Cramer
+library(scales)     # Pour l'affichage en %
+library(tidyverse)
+library(ade4) 
+library(factoextra)
+library(cluster)
+library(WeightedCluster)
+library(gtsummary)
+```
+
+## 2.2. Import du jeu de données
+
+Import
+
+```{r}
+# Import du jeu de données 
+data <- read.csv("data/ObesityDataSet_raw_and_data_sinthetic.csv", 
+  encoding="UTF-8", header = TRUE, sep=",", dec = ".")
+
+head(data)
+```
+
+Aperçu des données
+
+```{r}
+# Aperçu des données
+str(data)
+```
+
+Vérification des valeurs manquantes : aucune
+
+```{r}
+# Vérification des valeurs manquantes
+verif_na <- data %>% 
+  summarise_all(~sum(is.na(.)))
+verif_na
+# Aucune valeur manquante
+```
+
+## 2.3. Transformation des variables
+
+Renommage des colonnes et formatage des colonnes
+
+```{r}
+# Copie de la 
+df_obesite <- data
+
+# Renommage des colonnes
+
+names(df_obesite) <- c(
+  "Gender"="sexe",
+  "Age"="age",
+  "Height"="taille",
+  "Weight"="poids",
+  "family_history_with_overweight"="ant_fam_obesite",
+  "FAVC"="conso_freq_alim_cal",
+  "FCVC"="freq_conso_legumes",
+  "NCP"="nbre_repas_jr",
+  "CAEC"="mange_entre_repas",
+  "SMOKE"="fume",
+  "CH2O"="conso_eau_jr",
+  "SCC"="surveille_cal_conso",
+  "FAF"="act_physique",
+  "TUE"="tps_use_tech",
+  "CALC"="freq_conso_alcool",
+  "MTRANS"="moy_trans",
+  "NObeyesdad"="niv_obesite")
+
+# Formatage des colonnes
+liste_var_quali <- c("sexe","ant_fam_obesite","conso_freq_alim_cal","mange_entre_repas",
+                     "fume","surveille_cal_conso","freq_conso_alcool","moy_trans","niv_obesite")
+
+df_obesite <- df_obesite %>%
+  mutate_at(liste_var_quali, as.factor)
+
+head(df_obesite)
+```
+
+Création des variables qualitatives correspondantes aux variables quantitatives de type échelle
+
+Variables en question : FCVC, NCP, CH2O, FAF, TUE
+
+-   "FCVC"="freq_conso_legumes" ;
+
+-   "NCP"="nbre_repas_jr" ;
+
+-   "CH2O"="conso_eau_jr" ;
+
+-   "FAF"="act_physique" ;
+
+-   "TUE"="tps_use_tech"
+
+```{r}
+df_obes_transf <- df_obesite
+
+df_obes_transf <- df_obes_transf %>% 
+  mutate(imc = poids/(taille*taille)) %>% 
+  mutate(grp_imc = cut(imc, c(min(imc), 18.49, 24.9, 29.9, 34.9, 40, max(imc)), right = TRUE, include.lowest = TRUE,
+                       labels = c("imc_inf_18.5_sousp", "imc_18.5_24.9_normal", "imc_25_29.9_surp",
+                                  "imc_30_34.9_obesmod", "imc_35_39.9_obessev", "imc_sup_40_obesmass")),
+         grp_freq_conso_legumes = cut(freq_conso_legumes, seq(from = 1, to = 3, by = 2/3), 
+                                      right = TRUE, include.lowest = TRUE,
+                                      labels = c("rarement", "souvent", "toujours")),
+         grp_age = cut(age, c(14, 20, 26, 35, 61), right = TRUE, include.lowest = TRUE,
+                       labels = c("14_20", "20_26", "26_35", "35_61")),
+         grp_nbre_repas_jr = cut(nbre_repas_jr, seq(from = 1, to = 4, by = 1), right = TRUE, include.lowest = TRUE,
+                                 labels = c("moins_de_2", "entre_2_et_3", "plus_de_3")),
+         grp_conso_eau_jr = cut(conso_eau_jr, seq(from = 1, to = 3, by = 1), right = TRUE, include.lowest = TRUE,
+                                labels = c("entre_1_2L", "plus_de_2L")),
+         grp_act_physique = cut(act_physique, seq(from = 0, to = 3, by = 0.75), right = TRUE, include.lowest = TRUE,
+                                labels = c("tres_peu", "peu", "assez", "frequent")),
+         grp_tps_use_tech = cut(tps_use_tech, seq(from = 0, to = 2, by = 0.5), right = TRUE, include.lowest = TRUE,
+                                labels = c("moins_de_30mn", "entre_30mn_1h", "entre_1h_1h30", "entre_1h30_2h"))
+         ) %>% 
+  mutate(sexe = recode(sexe, "Female" = "femme", "Male" = "homme"),
+         ant_fam_obesite = recode(ant_fam_obesite, "no" = "non", "yes" = "oui"),
+         conso_freq_alim_cal = recode(conso_freq_alim_cal, "no" = "non", "yes" = "oui"),
+         mange_entre_repas = recode(mange_entre_repas, "no" = "non", "Sometimes" = "souvent", 
+                                    "Frequently" = "frequemment", "Always" = "toujours"),
+         fume = recode(fume, "no" = "non", "yes" = "oui"),
+         surveille_cal_conso = recode(surveille_cal_conso, "no" = "non", "yes" = "oui"),
+         freq_conso_alcool = recode(freq_conso_alcool, "no" = "non", "Sometimes" = "souvent", 
+                                    "Frequently" = "frequemment", "Always" = "toujours"),
+         moy_trans = recode(moy_trans, "Motorbike" = "moto", "Automobile" = "automobile", 
+                            "Public_Transportation" = "transports_en_commun", "Walking" = "marche", "Bike" = "velo"),
+         niv_obesite = recode(niv_obesite, "Insufficient_Weight" = "sous_poids",
+                              "Normal_Weight" = "normal", "Overweight_Level_I" = "surpoids_niv_1",
+                              "Overweight_Level_II" = "surpoids_niv_2", "Obesity_Type_I" = "obesite_type_1",
+                              "Obesity_Type_II" = "obesite_type_2", "Obesity_Type_III" = "obesite_type_3"))
+
+head(df_obes_transf)
+```
+
+# 3. Description des données
+
+## 3.1. Analyse univariée
+
+### 3.1.1. Variables quantitatives
+
+#### 3.1.1.1. Résumé numérique des variables quantitatives
+
+Définition de la fonction "resume_quanti" :
+
+```{r}
+# library(moments)
+
+# Definition de la fonction "resume_quanti" pour le résumé numérique de variables quantitaves
+resume_quanti <- function(base) {
+  # Cette fonction permet de réaliser les statistiques descriptives sur toutes les variables quantitatives d'une base de données
+  
+  # Filtrer uniquement les colonnes numériques
+  liste_variable_quanti <- base %>% select(where(is.numeric))
+  
+  # Calcul des statistiques descriptives
+  # /!\ na.rm = TRUE -> n'a aucune incidence car la base ne compte aucune valeur manquante
+  # /!\ na.rm = TRUE -> à éviter si la base contient des valeurs manquantes (à traiter au préalable)
+  nb_obs <- sapply(liste_variable_quanti, function(x) sum(!is.na(x)))
+  moyenne <- colMeans(liste_variable_quanti, na.rm = TRUE)
+  mediane <- apply(liste_variable_quanti, 2, median, na.rm = TRUE)
+  max_vals <- apply(liste_variable_quanti, 2, max, na.rm = TRUE)
+  min_vals <- apply(liste_variable_quanti, 2, min, na.rm = TRUE)
+  std <- apply(liste_variable_quanti, 2, sd, na.rm = TRUE)
+  var <- apply(liste_variable_quanti, 2, var, na.rm = TRUE)
+  q1 <- apply(liste_variable_quanti, 2, quantile, probs = 0.25, na.rm = TRUE)
+  q3 <- apply(liste_variable_quanti, 2, quantile, probs = 0.75, na.rm = TRUE)
+  iqr <- q3 - q1
+  asymetrie <- apply(liste_variable_quanti, 2, moments::skewness, na.rm = TRUE)
+  aplatissement <- apply(liste_variable_quanti, 2, moments::kurtosis, na.rm = TRUE)
+  
+  # Construction du tableau des statistiques descriptives
+  stat_desc_num <- data.frame(
+    Nb_obs = nb_obs,
+    Moyenne = round(moyenne, 2),
+    Médiane = round(mediane, 2),
+    Max = round(max_vals, 2),
+    Min = round(min_vals, 2),
+    Ecart_type = round(std, 2),
+    Variance = round(var, 2),
+    Q1 = round(q1, 2),
+    Q3 = round(q3, 2),
+    IQR = round(iqr, 2),
+    Asymetrie = round(asymetrie, 2),
+    Aplatissement = round(aplatissement, 2)
+  )
+  
+  return(stat_desc_num)
+}
+
+```
+
+Affichage du resumé numérique des variables quantitatives :
+
+```{r}
+# Resumé numérique de variables quantitaves
+# df_obes_transf[-c("freq_conso_legumes", "nbre_repas_jr", "conso_eau_jr", "act_physique", "tps_use_tech")]
+resume_numerique_quanti <- resume_quanti(df_obes_transf)
+resume_numerique_quanti
+
+#resume_numerique_quanti <- resume_quanti(df_obesite)
+#resume_numerique_quanti
+```
+
+-   Graphes des variables quantitatives
+
+#### 3.1.1.2. Graphes des variables quantitatives
+
+Définition de la fonction "graphiques_quanti" :
+
+```{r}
+# Definition de la fonction "graphiques_quanti" pour le résumé numérique de variables quantitaves
+graphiques_quanti <- function(base) {
+  # Déterminer la liste des variables quantitatives
+  liste_variable_quanti <- base %>% select(where(is.numeric)) %>% names()
+  
+  for (var in liste_variable_quanti) {
+    # Histogramme
+    p_hist <- ggplot(base, aes_string(x = var)) +
+      geom_histogram(bins = 20, fill = "lightblue", color = "white") +
+      ggtitle(paste("Histogramme de la variable", var)) +
+      theme_minimal() 
+      print(p_hist)
+
+    # Courbe de densité
+    p_density <- ggplot(base, aes_string(x = var)) +
+      geom_density(fill = "blue", alpha = 0.5) +
+      ggtitle(paste("Courbe de densité de la variable", var)) +
+      theme_minimal()
+      print(p_density)
+
+    # Boxplot
+    p_box <- ggplot(base, aes_string(y = var)) +
+      geom_boxplot(fill = "lightgreen", color = "black") +
+      ggtitle(paste("Boxplot de la variable", var)) +
+      xlab("") +
+      theme_minimal() 
+      print(p_box)
+    
+    # QQ Plot
+    qqnorm(base[[var]], main = paste("QQ Plot de la variable", var))
+    qqline(base[[var]], col = "red", lwd = 2)    
+
+  }
+}
+
+```
+
+Génération des graphes des variables quantitatives :
+
+```{r}
+# Génération des graphes des variables quantitatives 
+#graphiques_quanti(df_obesite)
+graphiques_quanti(df_obes_transf)
+
+```
+
+#### 3.1.1.3. Test de normalité des variables quantitatives age, taille, poids, imc
+
+Par rapport au nombre d'observations, le test de normalité (en termes d'asymétrie et d'aplatissement) de Jarque Bera est mieux adapté
+
+```{r}
+# if(!require(tseries)) install.packages("tseries")
+#library(tseries)
+test_norm_jb_age <- jarque.bera.test(df_obes_transf$age)
+test_norm_jb_taille <- jarque.bera.test(df_obes_transf$taille)
+test_norm_jb_poids <- jarque.bera.test(df_obes_transf$poids)
+test_norm_jb_imc <- jarque.bera.test(df_obes_transf$imc)
+test_norm_jb_age
+test_norm_jb_taille
+test_norm_jb_poids
+test_norm_jb_imc
+```
+
+### 3.1.2. Variables qualitatives
+
+#### 3.1.2.1. Résumé numérique des variables qualitatives
+
+-   Résumés numériques des variables qualitatives
+
+Définition de la fonction "resume_quali" :
+
+```{r}
+# Definition de la fonction "resume_quali" pour le résumé numérique de variables qualitaves
+resume_quali <- function(base) {
+  # Filtrer uniquement les colonnes qualitatives (facteurs ou chaînes de caractères)
+  qualitatives <- base %>% select(where(is.factor) | where(is.character))
+  
+  # Initialiser une liste pour stocker les résumés
+  resume <- list()
+  
+  # Boucler sur chaque colonne qualitative
+  for (col in names(qualitatives)) {
+    freq <- table(qualitatives[[col]])  # Fréquence absolue
+    proportion <- prop.table(freq) * 100  # Proportion
+    mode <- names(freq)[which.max(freq)]  # Mode
+    
+    # Créer un data.frame pour stocker les résultats
+    resume[[col]] <- data.frame(
+      Catégorie = names(freq),
+      `Fréquence absolue` = as.integer(freq),
+      Proportion = as.numeric(proportion),
+      Mode = c(mode, rep(NA, length(freq) - 1))  # Mode uniquement sur la première ligne
+    )
+  }
+  
+  return(resume)
+}
+
+```
+
+Affichage du résumé numérique des variables qualitatives :
+
+```{r}
+# Resume numérique des variables qualitatives
+#resume_numerique_quali <- resume_quali(df_obesite)
+resume_numerique_quali <- resume_quali(df_obes_transf)
+#resume_numerique_quali
+
+# Supposons que "resumes" soit une liste contenant des DataFrames ou des objets similaires
+for (col in names(resume_numerique_quali)) {
+  cat(paste("Résumé pour", col, ":\n"))
+  print(resume_numerique_quali[[col]])
+  cat("\n")
+}
+
+
+
+
+```
+
+#### 3.1.2.2. Graphes des variables qualitatives
+
+-   Graphes des variables qualitatives
+
+Définition de la fonction "graphiques_quali" :
+
+```{r}
+# Definition de la fonction "graphiques_quali" pour le résumé numérique de variables quantitaves
+graphiques_quali <- function(base) {
+  # Sélectionner uniquement les colonnes qualitatives
+  qualitatives <- base %>% select(where(is.factor))
+
+  # Parcourir chaque colonne qualitative
+  for (col in colnames(qualitatives)) {
+    freq <- table(qualitatives[[col]])  # Fréquences absolues
+    proportions <- prop.table(freq) * 100  # Proportions en %
+
+    # Barplot avec fréquences absolues
+    freq_df <- data.frame(Catégories = names(freq), Fréquences = as.vector(freq))
+    p_bar_freq <- ggplot(freq_df, aes(x = Catégories, y = Fréquences, fill = names(freq))) +
+      geom_bar(stat = "identity", color = "black") + # , fill = "skyblue",
+      geom_text(aes(label = Fréquences), vjust = -0.5) +
+      ggtitle(paste("Barplot pour la variable '", col, "'", sep = "")) +
+      xlab("Catégories") +
+      ylab("Fréquence absolue") +
+      theme_minimal() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      scale_fill_brewer(palette = "Pastel1", name = col) # 
+      print(p_bar_freq)
+
+    # Barplot avec proportions
+    proportions_df <- data.frame(Catégories = names(proportions), Proportions = as.vector(proportions))
+    p_bar_prop <- ggplot(proportions_df, aes(x = Catégories, y = Proportions, fill = names(proportions))) +
+      geom_bar(stat = "identity", color = "black") + # , fill = "lightgreen"
+      geom_text(aes(label = paste0(round(Proportions, 1), "%")), vjust = -0.5) +
+      ggtitle(paste("Barplot avec proportions pour '", col, "'", sep = "")) +
+      xlab("Catégories") +
+      ylab("Proportion (%)") +
+      theme_minimal() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      scale_fill_brewer(palette = "Pastel1", name = col)
+      print(p_bar_prop)
+
+    # Diagramme circulaire (pie chart)
+    pie(freq,
+        labels = paste(names(freq), "\n", round(prop.table(freq) * 100, 2), "%"),
+        col = rainbow(length(freq)), 
+        main = paste("Diagramme circulaire pour '", col, "'", sep = "")
+        )
+
+  }
+}
+
+```
+
+Génération des graphes des variables qualitatives :
+
+```{r}
+# Générer les graphiques
+#graphiques_quali(df_obesite)
+graphiques_quali(df_obes_transf)
+```
+
+## 3.2. Analyse bivariée
+
+```{r}
+# Liste des variables quantitatives et qualitatives de la base "df_obes_transf"
+# variables quantitatives (quant_vars)
+quant_vars_list <- df_obes_transf %>% select(where(is.numeric)) %>% names()
+ 
+# variables qualitatives (qual_vars)
+qual_vars_list <- df_obes_transf %>% select(where(is.factor)) %>% names()
+```
+
+### 3.2.1. Lien entre variables quantitatives
+
+#### 3.2.1.1. Nuage de points
+
+-   Nuage de points
+
+```{r}
+## Nuage de points pour les relations entre variables quantitatives
+quant_vars <- df_obes_transf %>% select(where(is.numeric))
+for (i in 1:(ncol(quant_vars) - 1)) {
+  for (j in (i + 1):ncol(quant_vars)) {
+    p_scatter <- ggplot(df_obes_transf, aes_string(x = names(quant_vars)[i], y = names(quant_vars)[j])) +
+      geom_point(alpha = 0.6) +
+      ggtitle(paste("Nuage de points entre", names(quant_vars)[i], "et", names(quant_vars)[j])) +
+      theme_minimal() 
+      print(p_scatter)
+  }
+}
+```
+
+#### 3.2.1.2. Heatmap de corrélation
+
+-   Heatmap de corrélation
+
+```{r}
+# Créer une heatmap de corrélation
+
+# Première approche package ggplot2
+# Créer une heatmap avec ggplot2
+#library(reshape2) # Pour la fonction melt()
+#library(ggplot2)
+# Calculer la matrice de corrélation sur les variables spécifiées
+correlation_matrix <- cor(df_obes_transf[, quant_vars_list], use = "complete.obs", method = "pearson") 
+# Transformer la matrice de corrélation pour la visualisation avec ggplot
+correlation_data <- melt(correlation_matrix)
+
+# Créer la heatmap
+ggplot(correlation_data, aes(Var1, Var2)) +  # axes x (Var1) et y (Var2)
+  geom_tile(aes(fill = value), colour = "white") +  # tuiles rectangulaires colorées
+  geom_text(aes(label = round(value, 2)), size = 3, vjust = 1) +  # texte à chaque tuile avec la val de corr
+  # échelle de couleur allant du bleu au rouge pour représenter les val de corr, avec blanc comme point médian
+  scale_fill_gradient2(low = "blue", high = "red", mid = "white", 
+                       midpoint = 0, limit = c(-1,1), space = "Lab", name="Correlation") +  
+  theme_minimal() +  # Applique un thème minimal à la figure
+  # Fait pivoter les étiquettes de l'axe x de 45 degrés et les aligne à droite
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +  
+  coord_fixed()  # Fixe les proportions des unités sur les deux axes pour que les tuiles soient carrées
+
+# Deuxième approche package corrplot
+# Créer une heatmap avec corrplot
+# Calculer la matrice de corrélation sur les variables spécifiées
+correlation_matrix <- cor(df_obes_transf[, quant_vars_list], use = "complete.obs", method = "pearson") 
+
+# Appel à corrplot avec une taille de texte d'étiquette réduite
+#library(corrplot)
+corrplot(correlation_matrix, method = "color", type = "upper", order = "hclust",
+         tl.col = "black", tl.srt = 45, # Couleur et rotation du texte
+         tl.cex = 0.7, # Réduire la taille du texte des étiquettes
+         addCoef.col = "black", # Ajouter les coefficients de corrélation
+         col = colorRampPalette(c("#6D9EC1", "white", "#E46726"))(200),
+         diag = FALSE) # Ne pas afficher la diagonale
+
+```
+
+#### 3.2.1.3. Tests d'hypothèses sur les relations bivariées entre les variables quantitatives
+
+Tests d'hypothèses entre taille et poids
+
+```{r}
+res_cor_taille_poids <- cor.test(df_obes_transf$taille, df_obes_transf$poids, method = "pearson")
+
+# Pour accéder au coefficient de corrélation :
+coef_cor_taille_poids <- res_cor_taille_poids$estimate
+
+# Pour accéder à la p-valeur :
+p_val_taille_poids <- res_cor_taille_poids$p.value
+
+# Affichage des résultats
+cat("Coefficient de corrélation de Pearson entre taille et poids :", coef_cor_taille_poids, "\n")
+cat("P-valeur entre taille et poids :", p_val_taille_poids, "\n")
+
+```
+
+Tests d'hypothèses entre taille et imc
+
+```{r}
+res_cor_taille_imc <- cor.test(df_obes_transf$taille, df_obes_transf$imc, method = "pearson")
+
+# Pour accéder au coefficient de corrélation :
+coef_cor_taille_imc <- res_cor_taille_imc$estimate
+
+# Pour accéder à la p-valeur :
+p_val_taille_imc <- res_cor_taille_imc$p.value
+
+# Affichage des résultats
+cat("Coefficient de corrélation de Pearson entre taille et imc :", coef_cor_taille_imc, "\n")
+cat("P-valeur entre taille et imc :", p_val_taille_imc, "\n")
+```
+
+Tests d'hypothèses entre poids et imc
+
+```{r}
+res_cor_poids_imc <- cor.test(df_obes_transf$poids, df_obes_transf$imc, method = "pearson")
+
+# Pour accéder au coefficient de corrélation :
+coef_cor_poids_imc <- res_cor_poids_imc$estimate
+
+# Pour accéder à la p-valeur :
+p_val_poids_imc <- res_cor_poids_imc$p.value
+
+# Affichage des résultats
+cat("Coefficient de corrélation de Pearson entre poids et imc :", coef_cor_poids_imc, "\n")
+cat("P-valeur entre poids et imc :", p_val_poids_imc, "\n")
+```
+
+Tests d'hypothèses entre age et imc
+
+```{r}
+res_cor_age_imc <- cor.test(df_obes_transf$age, df_obes_transf$imc, method = "pearson")
+
+# Pour accéder au coefficient de corrélation :
+coef_cor_age_imc <- res_cor_age_imc$estimate
+
+# Pour accéder à la p-valeur :
+p_val_age_imc <- res_cor_age_imc$p.value
+
+# Affichage des résultats
+cat("Coefficient de corrélation de Pearson entre age et imc :", coef_cor_age_imc, "\n")
+cat("P-valeur entre age et imc :", p_val_age_imc, "\n")
+```
+
+Tests d'hypothèses entre age et poids
+
+```{r}
+res_cor_age_poids <- cor.test(df_obes_transf$age, df_obes_transf$poids, method = "pearson")
+
+# Pour accéder au coefficient de corrélation :
+coef_cor_age_poids <- res_cor_age_poids$estimate
+
+# Pour accéder à la p-valeur :
+p_val_age_poids <- res_cor_age_poids$p.value
+
+# Affichage des résultats
+cat("Coefficient de corrélation de Pearson entre age et poids :", coef_cor_age_poids, "\n")
+cat("P-valeur entre age et poids :", p_val_age_poids, "\n")
+```
+
+### 3.2.2. Lien entre variables quantitatives et qualitatives
+
+#### 3.2.2.1. Résumé numérique par modalité des variables qualitatives
+
+Résumé numérique bivarié (imc par var quali)
+
+```{r}
+# Variable quantitative cible
+myquant <- "imc"
+
+# Sélection des variables qualitatives
+myqual <- names(df_obes_transf)[sapply(df_obes_transf, function(col) is.factor(col) || is.character(col))]
+
+# Initialisation de la liste vide
+res_num_qual_imc <- list()
+
+# Boucle sur chaque variable qualitative
+for (qual in myqual) {
+  summary <- df_obes_transf %>%
+    group_by(.data[[qual]]) %>%
+    summarise(
+      effectif = n(),
+      moyenne = mean(.data[[myquant]], na.rm = TRUE),
+      mediane = median(.data[[myquant]], na.rm = TRUE),
+      ecart_type = sd(.data[[myquant]], na.rm = TRUE),
+      min = min(.data[[myquant]], na.rm = TRUE),
+      max = max(.data[[myquant]], na.rm = TRUE),
+      q1 = quantile(.data[[myquant]], 0.25, na.rm = TRUE),
+      q3 = quantile(.data[[myquant]], 0.75, na.rm = TRUE)
+    )
+  
+  # Stockage dans la liste
+  res_num_qual_imc[[paste(qual, myquant, sep = "_")]] <- summary
+}
+print(res_num_qual_imc)
+```
+
+Résumé numérique bivarié du dataset entier
+
+Création Fonction resume numerique quanti par quali
+
+```{r}
+# Fonction Résumé numérique quanti par quali : "generate_numeric_summary"
+# Charger les packages nécessaires
+#library(dplyr)
+
+# Fonction pour générer un résumé numérique par modalité des variables qualitatives
+generate_numeric_summary <- function(df) {
+  # Sélectionner les variables qualitatives et quantitatives
+  rnqtql_qual_vars <- names(df)[sapply(df, is.factor) | sapply(df, is.character)]
+  rnqtql_quant_vars <- names(df)[sapply(df, is.numeric)]
+  
+  # Initialiser une liste pour stocker les résultats
+  results <- list()
+  
+  # Boucle sur chaque variable qualitative
+  for (qual in rnqtql_qual_vars) {
+    # Boucle sur chaque variable quantitative
+    for (quant in rnqtql_quant_vars) {
+      # Résumé statistique
+      summary <- df %>%
+        group_by(.data[[qual]]) %>%
+        summarise(
+          mean_value = mean(.data[[quant]], na.rm = TRUE),
+          median_value = median(.data[[quant]], na.rm = TRUE),
+          std_value = sd(.data[[quant]], na.rm = TRUE),
+          .groups = "drop"
+        )
+      
+      # Stocker le résultat dans la liste
+      results[[paste(qual, quant, sep = "_")]] <- summary
+    }
+  }
+  
+  return(results)
+}
+
+#fin fonction resume numerique quanti par quali
+```
+
+Exécution de la fonction pour le résumé numérique quanti quali
+
+```{r}
+# Appliquer la fonction à votre jeu de données (par exemple, "df")
+res_num_biv_dataset <- generate_numeric_summary(df_obes_transf)
+
+# Afficher un exemple de résumé (par exemple, pour la première combinaison)
+print(res_num_biv_dataset[[1]])
+print(res_num_biv_dataset)
+
+```
+
+#### 3.2.2.2. Boxplot bivariés
+
+##### Relation entre variables quantitatives et qualitatives (entre imc et les autres var qual)
+
+```{r}
+# Boxplot bivarié de quanti par quali
+# imc par var quali
+myquant <- "imc"
+myqual <- c("grp_imc", "sexe","ant_fam_obesite", "conso_freq_alim_cal", "grp_freq_conso_legumes", 
+            "grp_nbre_repas_jr", "mange_entre_repas", "fume", "grp_conso_eau_jr", 
+            "surveille_cal_conso", "grp_act_physique", "moy_trans", 
+            "freq_conso_alcool", "grp_tps_use_tech")
+
+for (qual in 1:length(myqual)) {
+  p_quest_imc_cat <- ggplot(df_obes_transf, aes_string(x = myqual[qual], y = myquant, fill = myqual[qual])) +
+    geom_boxplot() +
+    labs(x = myqual[qual], y = myquant, title = paste("Boxplot de", myquant, "par", myqual[qual])) +
+    scale_fill_brewer(palette = "Set3", name = myqual[qual]) + 
+    theme_minimal() 
+    print(p_quest_imc_cat)
+}
+
+# graphe unique
+# myqual <- "grp_imc"
+# myquant <- "imc"
+#   ggplot(df_obes_transf, aes_string(x = myqual, y = myquant, fill = myqual)) +
+#     geom_boxplot() +
+#     labs(x = myqual, y = myquant, title = paste("Boxplot de", myquant, "par", myqual)) +
+#     scale_fill_brewer(palette = "Set3", name = myqual) + 
+#     theme_minimal() 
+#     print()
+
+```
+
+##### Création de fonction de génération Boxplot bivariés sur l'ensemble du dataset
+
+```{r}
+# Charger les bibliothèques nécessaires
+#library(ggplot2)
+
+# Fonction pour générer des boxplots bivariés
+generer_boxplots <- function(data) {
+  # Identifier les variables qualitatives (facteur ou caractère)
+  variables_qualitatives <- names(data)[sapply(data, is.factor) | sapply(data, is.character)]
+  
+  # Identifier les variables quantitatives (numériques)
+  variables_quantitatives <- names(data)[sapply(data, is.numeric)]
+  
+  # Boucle sur chaque paire de variables qualitative et quantitative
+  for (qualitative in variables_qualitatives) {
+    for (quantitative in variables_quantitatives) {
+      # Créer un boxplot
+      p <- ggplot(data, aes_string(x = qualitative, y = quantitative, fill = qualitative)) +
+        #geom_boxplot(fill = "lightblue", color = "black") +
+        geom_boxplot() +
+        labs(
+          title = paste("Boxplot de", quantitative, "par", qualitative),
+          x = qualitative,
+          y = quantitative
+        ) +
+        scale_fill_brewer(palette = "Set3", name = qualitative) + 
+        theme_minimal() +
+        theme(axis.text.x = element_text(angle = 45, hjust = 1))
+      
+      # Afficher le graphique
+      print(p)
+    }
+  }
+}
+
+```
+
+##### Génération boxplot bivariée sur l'ensemble du dataset
+
+```{r}
+# Appeler la fonction pour générer les boxplots
+generer_boxplots(df_obes_transf)
+```
+
+#### 3.2.2.3. Tests d'hypothèses sur les relations bivariées entre les variables quantitatives et qualitatives
+
+##### Test Student pour 2 modalités, Test ANOVA pour plus de 2 modalités sur l'ensemble du dataset (Wilcoxon et Kruskal-Wallis pour les tests non paramétriques)
+
+```{r}
+# library(ggplot2)
+# library(dplyr)
+# library(readr)
+# library(tidyr)
+# library(car)
+# library(ggpubr)
+
+# Charger le jeu de données
+#df <- read_csv("data.csv")
+df <- df_obes_transf
+
+# Identifier les variables qualitatives et quantitatives
+var_quali <- names(df)[sapply(df, is.factor) | sapply(df, is.character)]
+var_quanti <- names(df)[sapply(df, is.numeric)]
+
+# Boucle sur chaque paire de variables (quantitative, qualitative)
+for (quanti in var_quanti) {
+  for (quali in var_quali) {
+    cat("\n🔹 Analyse de", quanti, "en fonction de", quali, "\n")
+    
+    # Affichage des effectifs par modalité
+    print(table(df[[quali]]))
+    
+    # Création des boxplots et violon plots
+    p1 <- ggplot(df, aes(x = .data[[quali]], y = .data[[quanti]], fill = .data[[quali]])) +
+      geom_boxplot() +
+      theme_minimal() +
+      labs(title = paste("Boxplot de", quanti, "selon", quali), x = quali, y = quanti)
+    
+    # p2 <- ggplot(df, aes(x = .data[[quali]], y = .data[[quanti]], fill = .data[[quali]])) +
+    #   geom_violin() +
+    #   theme_minimal() +
+    #   labs(title = paste("Violin Plot de", quanti, "selon", quali), x = quali, y = quanti)
+    
+    #print(ggarrange(p1, p2, ncol = 2, nrow = 1))
+    print(p1)
+    
+    # Test statistique
+    categories <- unique(na.omit(df[[quali]]))
+    
+    if (length(categories) == 2) {  # Test t de Student si 2 modalités
+      group1 <- df %>% filter(.data[[quali]] == categories[1]) %>% pull(.data[[quanti]])
+      group2 <- df %>% filter(.data[[quali]] == categories[2]) %>% pull(.data[[quanti]])
+      
+      test_t <- t.test(group1, group2, var.equal = FALSE)
+      cat("Test t de Student entre", quanti, "et", quali, ": Statistique =", round(test_t$statistic, 4), ", p-value =", round(test_t$p.value, 4), "\n")
+      
+      test_wilcoxon <- wilcox.test(group1, group2)
+      cat("Test de Wilcoxon entre", quanti, "et", quali, ": Statistique =", round(test_wilcoxon$statistic, 4), ", p-value =", round(test_wilcoxon$p.value, 4), "\n")
+      
+    } else if (length(categories) > 2) {  # ANOVA si plus de 2 modalités
+      #test_anova <- aov(.data[[quanti]] ~ .data[[quali]], data = df)
+      test_anova <- aov(as.formula(paste(quanti, "~", quali)), data = df)
+	  cat("Test ANOVA entre", quanti, "et", quali, ": Statistique =", round(summary(test_anova)[[1]][["F value"]][1], 4), ", p-value =", round(summary(test_anova)[[1]][["Pr(>F)"]][1], 4), "\n")
+      
+      #test_kruskal <- kruskal.test(.data[[quanti]] ~ .data[[quali]], data = df)
+      test_kruskal <- kruskal.test(as.formula(paste(quanti, "~", quali)), data = df)
+	  cat("Test Kruskal-Wallis entre", quanti, "et", quali, ": Statistique =", round(test_kruskal$statistic, 4), ", p-value =", round(test_kruskal$p.value, 4), "\n")
+    }
+    
+    cat(rep("-", 50), "\n")
+  }
+}
+
+```
+
+### 3.2.3. Lien entre variables qualitatives
+
+#### 3.2.3.1. Diagrammes en barre
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(scales)  # pour la fonction percent()
+
+# Exemple : data <- read.csv("data.csv")
+# Supposons que ton jeu de données s'appelle `data`
+
+# Sélection des variables qualitatives
+var_quali <- names(df_obes_transf)[sapply(df_obes_transf, function(x) is.factor(x) || is.character(x))]
+
+# Boucle sur les paires de variables qualitatives
+for (i in 1:(length(var_quali) - 1)) {
+  for (j in (i + 1):length(var_quali)) {
+    
+    var1 <- var_quali[i]
+    var2 <- var_quali[j]
+    
+    # Table des effectifs
+    df_plot <- df_obes_transf %>%
+      filter(!is.na(.data[[var1]]), !is.na(.data[[var2]])) %>%
+      group_by(.data[[var1]], .data[[var2]]) %>%
+      summarise(N = n(), .groups = "drop")
+    
+    # Pourcentages (par groupe de var1)
+    df_plot <- df_plot %>%
+      group_by(.data[[var1]]) %>%
+      mutate(Percent = N / sum(N)) %>%
+      ungroup()
+    
+    # Création du graphique avec texte
+    p_barplot_biv <- ggplot(df_plot, aes_string(x = var1, y = "N", fill = var2)) +
+      geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+      geom_text(aes(label = paste0(N, "\n(", round(Percent * 100, 1), "%)")),
+                position = position_dodge(width = 0.9),
+                vjust = -0.5, size = 3.2) +
+      labs(title = paste("Diagramme en barres :", var1, "par", var2),
+           x = var1, y = "Effectifs", fill = var2) +
+      theme_minimal() +
+      theme(plot.title = element_text(hjust = 0.5))
+    
+    print(p_barplot_biv)
+  }
+}
+```
+
+#### 3.2.3.2. Tests d'hypothèses sur les relations bivariées entre les variables qualitatives
+
+```{r}
+# Packages nécessaires
+library(dplyr)
+library(ggplot2)
+library(vcd)        # Pour assocstats et V de Cramer
+library(reshape2)   # Pour le format long
+library(scales)     # Pour l'affichage en %
+
+# Exemple : data <- read.csv("data.csv")
+# Ici on suppose que ton jeu de données s'appelle "data"
+
+# Sélection des variables qualitatives
+var_quali <- names(df_obes_transf)[sapply(df_obes_transf, function(x) is.factor(x) || is.character(x))]
+
+# Boucle sur chaque paire de variables qualitatives
+for (i in 1:(length(var_quali) - 1)) {
+  for (j in (i + 1):length(var_quali)) {
+    
+    var1 <- var_quali[i]
+    var2 <- var_quali[j]
+    cat("\n🔹 Analyse entre", var1, "et", var2, "\n")
+    
+    # Table de contingence
+    tab <- table(df_obes_transf[[var1]], df_obes_transf[[var2]])
+    print("Table de contingence :")
+    print(tab)
+    
+    # Test du Khi-2
+    chi <- chisq.test(tab)
+    v_cramer <- assocstats(tab)$cramer
+    
+    cat("\nTest du Khi-2 :",
+        paste0("X² = ", round(chi$statistic, 4), 
+               ", p-value = ", round(chi$p.value, 4),
+               ", V de Cramer = ", round(v_cramer, 4)), "\n")
+    
+    # Heatmap des pourcentages par ligne
+    tab_prop <- prop.table(tab, margin = 1) * 100
+    df_heat <- as.data.frame(as.table(tab_prop))
+    names(df_heat) <- c(var1, var2, "Pourcentage")
+    
+    p_heatmap_pourcentages <- ggplot(df_heat, aes_string(x = var2, y = var1, fill = "Pourcentage")) +
+      geom_tile(color = "white") +
+      geom_text(aes(label = sprintf("%.1f", Pourcentage)), size = 4) +
+      scale_fill_gradient(low = "white", high = "steelblue") +
+      labs(title = paste("Heatmap des pourcentages de", var1, "selon", var2),
+           x = var2, y = var1) +
+      theme_minimal()
+    print(p_heatmap_pourcentages)
+    
+    cat(strrep("-", 50), "\n")
+  }
+}
+```
+
+# 4. Analyse factorielle : 
+
+## 4.1. Choix des variables actives
+
+Toutes les variables qualitatives
+
+Variables supplémentaires (éventuellement) : imc, age, poids
+
+ACM
+
+```{r}
+# Variables actives :
+# sexe, ant_fam_obesite, conso_freq_alim_cal, mange_entre_repas, fume, surveille_cal_conso, freq_conso_alcool, moy_trans, grp_imc, grp_freq_conso_legumes, grp_age, grp_nbre_repas_jr, grp_conso_eau_jr, grp_act_physique, grp_tps_use_tech   
+
+# Variables supplémentaires :
+#imc, age, poids
+
+acm_data <- df_obes_transf %>%
+  select(sexe, ant_fam_obesite, conso_freq_alim_cal, mange_entre_repas, fume, surveille_cal_conso, freq_conso_alcool, moy_trans, grp_imc, grp_freq_conso_legumes, grp_age, grp_nbre_repas_jr, grp_conso_eau_jr, grp_act_physique, grp_tps_use_tech)
+
+acm <- dudi.acm(acm_data, scannf = FALSE, nf = Inf)
+# explor::explor(acm)  # ligne à executer dans la console pour ne laisser dans un script reproductible
+
+
+
+```
+
+## 4.2. Choix du nombre de dimensions
+
+Screeplot
+
+```{r}
+# Screeplot :
+screeplot(acm)
+fviz_screeplot(acm, choice = "eigenvalue")
+fviz_screeplot(acm)
+
+# contribution des variables sur les axes 1 à 4 :
+fviz_contrib(acm, choice = "var", axes = 1)
+fviz_contrib(acm, choice = "var", axes = 2)
+fviz_contrib(acm, choice = "var", axes = 3)
+fviz_contrib(acm, choice = "var", axes = 4)
+```
+
+## 4.3. Interprétation de l'ACM
+
+```{r}
+# explor::explor(acm)  # ligne à executer dans la console pour ne laisser dans un script reproductible
+```
+
+```{r}
+acm_res <- explor::prepare_results(acm)
+# Graphe des variables (xax = 3, yax = 4 pour les dimensions 3 et 4)
+explor::MCA_var_plot(acm_res, xax = 1, yax = 2, var_sup = FALSE, var_sup_choice = ,
+    var_lab_min_contrib = 0, col_var = "Variable", symbol_var = "Variable",
+    size_var = "Contrib", size_range = c(46.875, 625), labels_size = 10, point_size = 50,
+    transitions = TRUE, labels_positions = NULL, labels_prepend_var = FALSE,
+    xlim = c(-3.38, 2.15), ylim = c(-2.78, 2.75))
+```
+
+### 4.3.1. Interprétation des graphes des individus
+
+### 4.3.2. Interprétation des graphes des variables
+
+### 4.3.3. Conclusion sur l'ACM
+
+# 5. Classification non supervisée : CAH 
+
+## 5.1. Mise en oeuvre CAH
+
+```{r}
+# calcul de la matrice de distance
+md <- dist.dudi(acm)
+
+# calcul de la matrice des distances de Gower
+library(cluster)
+#md_gower <- daisy(acm_data, metric = "gower")
+
+# calcul du dendrogramme
+arbre <- hclust(md, method = "ward.D2")
+#arbre_gower <- hclust(md_gower, method = "ward.D2")
+
+# Représenter le dendrogramme
+plot(arbre, labels = FALSE)
+
+```
+
+##### Saut d'inertie - Meilleur nombre de classe (1)
+
+```{r}
+# saut d'inertie
+inertie <- sort(arbre$height, decreasing = TRUE)
+plot(inertie[1:20], type = "s")
+```
+
+##### Meilleur nombre de classe (2)
+
+```{r}
+source(url("https://raw.githubusercontent.com/larmarange/JLutils/master/R/clustering.R"))
+best.cutree(arbre, graph = TRUE)
+```
+
+Dendogramme à 3 classes
+
+```{r}
+library(dendextend)
+color_branches(arbre, k = 3) %>% ggplot(labels = FALSE)
+```
+
+Dendogramme avec Factoextra
+
+```{r}
+#Dendogramme avec Factoextra
+library(factoextra)
+fviz_dend(arbre, k = 3, show_labels = FALSE, rect = TRUE)
+```
+
+```{r}
+library(WeightedCluster)
+as.clustrange(arbre, md) %>% plot()
+```
+
+```{r}
+df_obes_class <- df_obes_transf
+
+df_obes_class$typo <- cutree(arbre, 3)
+
+```
+
+### 5.1.1. Description à partir des plans de l'ACM
+
+### 5.1.2. Description à partir des variables
+
+```{r}
+factoextra::fviz_mca_var(acm, col.var = "contrib",
+  gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"))
+```
+
+### 5.1.3. Description à partir des individus
+
+```{r}
+
+factoextra::fviz_mca_ind(acm, geom = "point", alpha.ind = .25, habillage = df_obes_class$typo, addEllipses = TRUE)
+```
+
+### 5.2. Conclusion sur Classification non supervisée
+
+# 6. Conclusion
+
+The `echo: false` option disables the printing of code (only output is displayed).
